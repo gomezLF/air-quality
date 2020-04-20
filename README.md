@@ -11,10 +11,12 @@ Esta entrega consiste en las 5 primeras fases del método de la ingeniería, una
 
   #### 1.Método de la ingeniería
 
-  Enlace al repositorio git donde está alojado el [método de la ingeniería](https://github.com/eliaset/json-manipulator/blob/master/docs/M%C3%A9todo%20de%20la%20Ingenier%C3%ADa%20-%20%20Proyecto%20PI.docx)
+  Enlace a el [método de la ingeniería](https://github.com/gomezLF/air-quality/blob/develop/docs/delivery-1/M%C3%A9todo%20de%20la%20Ingenier%C3%ADa%20-%20PI_G%C3%B3mez-Balanta-Estupi%C3%B1an-Ram%C3%ADrez.pdf) del proyecto.
 
   #### 2.Vídeo
   
+  Enlace el video en el que se presenta un primer acercamiento a las funcionalidades del proyecto.
+  [Presentación Primera Entrega - Proyecto Integrador I](https://youtu.be/UJqWdMgBUCs)
   
   
 ---
