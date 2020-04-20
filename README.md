@@ -26,15 +26,28 @@ Esta entrega consiste en las 5 primeras fases del método de la ingeniería, una
 La segunda entrega de: requeriminetos funcionales, diagrama de clases del modelo del mundo, listado de responsabilidades de cada integrante, modelo git del proyecto, 5 reportes (1 mockup por cada uno de estos) indicando variables y configuración de cada reporte, descripción del algoritmo a utilizar, vídeo explicando los elementos de la entrega. Por último, este documento (README.md) organizando las entregas.
 
 #### 1.Requeriminetos funcionales
+Enlace arcihivo word [requerimientos funcionales](https://github.com/gomezLF/air-quality/blob/develop/docs/delivery-2/Especificaci%C3%B3n%20de%20requerimientos.docx)
 
 #### 2.Diagrama de clases
 
+Enlace arcihivo word [diagrama de clases página 1](https://github.com/gomezLF/air-quality/blob/develop/docs/delivery-2/E2_Estupi%C3%B1an-Balanta-Ram%C3%ADrez_G%C3%B3mez.docx)
+
 #### 3.Modelo git del proyecto
+
+Enlace arichivo word con imagen [modelo Git página 2](https://github.com/gomezLF/air-quality/blob/develop/docs/delivery-2/E2_Estupi%C3%B1an-Balanta-Ram%C3%ADrez_G%C3%B3mez.docx)
 
 #### 4.Listado de responsabilidades
 
+Enlace archivo word [responsabilidades página 8](https://github.com/gomezLF/air-quality/blob/develop/docs/delivery-2/E2_Estupi%C3%B1an-Balanta-Ram%C3%ADrez_G%C3%B3mez.docx)
+
 #### 5.Reportes
+
+Enlace archivo word [reportes y mockups páginas 3-7](https://github.com/gomezLF/air-quality/blob/develop/docs/delivery-2/E2_Estupi%C3%B1an-Balanta-Ram%C3%ADrez_G%C3%B3mez.docx)
 
 #### 6.Algoritmo
 
+Enlace archivo word descripcción [algoritmo página 8](https://github.com/gomezLF/air-quality/blob/develop/docs/delivery-2/E2_Estupi%C3%B1an-Balanta-Ram%C3%ADrez_G%C3%B3mez.docx)
+
 #### 7.Vídeo
+
+Enlace [vídeo](https://github.com/gomezLF/air-quality/blob/develop/docs/delivery-2/Entrega%202.mp4)
