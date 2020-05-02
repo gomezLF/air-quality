@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "userInterface", "gui\userIn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "model", "model\model.csproj", "{0D8160B1-6B30-4DE6-A07A-BFEB734D5D33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirQualityGUI", "AirQualityGUI\AirQualityGUI.csproj", "{99391E57-AD08-492B-AEDC-B9899E10DB8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0D8160B1-6B30-4DE6-A07A-BFEB734D5D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D8160B1-6B30-4DE6-A07A-BFEB734D5D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D8160B1-6B30-4DE6-A07A-BFEB734D5D33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99391E57-AD08-492B-AEDC-B9899E10DB8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99391E57-AD08-492B-AEDC-B9899E10DB8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99391E57-AD08-492B-AEDC-B9899E10DB8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99391E57-AD08-492B-AEDC-B9899E10DB8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

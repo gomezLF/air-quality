@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{21D0B786-B680-4308-A0B2-1BE1AD314646}</ProjectGuid>
+    <ProjectGuid>{99391E57-AD08-492B-AEDC-B9899E10DB8D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>userInterface</RootNamespace>
-    <AssemblyName>userInterface</AssemblyName>
+    <RootNamespace>AirQualityGUI</RootNamespace>
+    <AssemblyName>AirQualityGUI</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>icons8_graph_3.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -53,23 +49,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomControl1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomControl1.Designer.cs">
-      <DependentUpon>CustomControl1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormDataset.cs">
+    <Compile Include="Air Quality.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDataset.Designer.cs">
-      <DependentUpon>FormDataset.cs</DependentUpon>
+    <Compile Include="Air Quality.Designer.cs">
+      <DependentUpon>Air Quality.cs</DependentUpon>
     </Compile>
-    <Compile Include="Medition.cs" />
+    <Compile Include="HotMapReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HotMapReport.Designer.cs">
+      <DependentUpon>HotMapReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LevelConcentrationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LevelConcentrationReport.Designer.cs">
+      <DependentUpon>LevelConcentrationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainReport.Designer.cs">
+      <DependentUpon>MainReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonitoryStationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonitoryStationReport.Designer.cs">
+      <DependentUpon>MonitoryStationReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormDataset.resx">
-      <DependentUpon>FormDataset.cs</DependentUpon>
+    <Compile Include="StudyPlaceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudyPlaceReport.Designer.cs">
+      <DependentUpon>StudyPlaceReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Air Quality.resx">
+      <DependentUpon>Air Quality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotMapReport.resx">
+      <DependentUpon>HotMapReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevelConcentrationReport.resx">
+      <DependentUpon>LevelConcentrationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport.resx">
+      <DependentUpon>MainReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonitoryStationReport.resx">
+      <DependentUpon>MonitoryStationReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,8 +110,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StudyPlaceReport.resx">
+      <DependentUpon>StudyPlaceReport.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -96,11 +129,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <ProjectReference Include="..\model\model.csproj">
+      <Project>{0d8160b1-6b30-4de6-a07a-bfeb734d5d33}</Project>
+      <Name>model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icons8_graph_3.ico" />
-    <Content Include="icons8_mechanistic_analysis.ico" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

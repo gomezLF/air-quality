@@ -1,16 +1,16 @@
-﻿namespace gui
+﻿namespace AirQualityGUI
 {
-    partial class Interface
+    partial class MainReport
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,18 +20,19 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interface));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainReport));
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbURLDataset = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btFilter = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -46,8 +47,6 @@
             this.cbClauses = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.tbURLDataset = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btShowFields = new System.Windows.Forms.Button();
             this.btDesmarkAll = new System.Windows.Forms.Button();
@@ -69,51 +68,69 @@
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.btBack = new System.Windows.Forms.Button();
-            this.btNext = new System.Windows.Forms.Button();
-            this.btFirst = new System.Windows.Forms.Button();
-            this.btLast = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btLast = new System.Windows.Forms.Button();
+            this.btFirst = new System.Windows.Forms.Button();
+            this.btNext = new System.Windows.Forms.Button();
+            this.btBack = new System.Windows.Forms.Button();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tlpFields.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.tbURLDataset);
+            this.panel5.Location = new System.Drawing.Point(-195, -101);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1191, 30);
+            this.panel5.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(285, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(159, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Agrege la URL del Dataset";
+            // 
+            // tbURLDataset
+            // 
+            this.tbURLDataset.AutoCompleteCustomSource.AddRange(new string[] {
+            " https://www.datos.gov.co/resource/ysq6-ri4e.json"});
+            this.tbURLDataset.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.tbURLDataset.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tbURLDataset.Location = new System.Drawing.Point(467, 3);
+            this.tbURLDataset.Name = "tbURLDataset";
+            this.tbURLDataset.Size = new System.Drawing.Size(387, 20);
+            this.tbURLDataset.TabIndex = 10;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 301);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 272);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1191, 354);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(537, 750);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "<<<";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(631, 750);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = ">>>";
-            this.button2.UseVisualStyleBackColor = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1048, 270);
+            this.dataGridView1.TabIndex = 23;
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.btFilter);
             this.panel1.Controls.Add(this.panel4);
@@ -128,21 +145,22 @@
             this.panel1.Controls.Add(this.cbClauses);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(665, 34);
+            this.panel1.Location = new System.Drawing.Point(615, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(538, 261);
-            this.panel1.TabIndex = 5;
+            this.panel1.Size = new System.Drawing.Size(346, 216);
+            this.panel1.TabIndex = 27;
             // 
             // btFilter
             // 
+            this.btFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btFilter.Location = new System.Drawing.Point(182, 188);
+            this.btFilter.Location = new System.Drawing.Point(93, 180);
             this.btFilter.Name = "btFilter";
             this.btFilter.Size = new System.Drawing.Size(133, 23);
             this.btFilter.TabIndex = 0;
             this.btFilter.Text = "Filtrar";
-            this.btFilter.UseVisualStyleBackColor = true;
-            this.btFilter.Click += new System.EventHandler(this.btFilter_Click_1);
+            this.btFilter.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -154,7 +172,7 @@
             // cbSeparater
             // 
             this.cbSeparater.FormattingEnabled = true;
-            this.cbSeparater.Location = new System.Drawing.Point(132, 101);
+            this.cbSeparater.Location = new System.Drawing.Point(41, 91);
             this.cbSeparater.Name = "cbSeparater";
             this.cbSeparater.Size = new System.Drawing.Size(80, 21);
             this.cbSeparater.TabIndex = 20;
@@ -162,7 +180,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(145, 85);
+            this.label1.Location = new System.Drawing.Point(54, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 19;
@@ -171,7 +189,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(306, 83);
+            this.label7.Location = new System.Drawing.Point(215, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 18;
@@ -180,7 +198,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(133, 43);
+            this.label6.Location = new System.Drawing.Point(42, 33);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 13);
             this.label6.TabIndex = 17;
@@ -190,7 +208,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(293, 43);
+            this.label5.Location = new System.Drawing.Point(202, 33);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 6;
@@ -198,7 +216,7 @@
             // 
             // tbValue
             // 
-            this.tbValue.Location = new System.Drawing.Point(266, 102);
+            this.tbValue.Location = new System.Drawing.Point(175, 92);
             this.tbValue.Name = "tbValue";
             this.tbValue.Size = new System.Drawing.Size(112, 20);
             this.tbValue.TabIndex = 13;
@@ -206,7 +224,7 @@
             // cbFields
             // 
             this.cbFields.FormattingEnabled = true;
-            this.cbFields.Location = new System.Drawing.Point(264, 59);
+            this.cbFields.Location = new System.Drawing.Point(173, 49);
             this.cbFields.Name = "cbFields";
             this.cbFields.Size = new System.Drawing.Size(114, 21);
             this.cbFields.TabIndex = 14;
@@ -214,7 +232,7 @@
             // 
             // tbNumberRows
             // 
-            this.tbNumberRows.Location = new System.Drawing.Point(219, 152);
+            this.tbNumberRows.Location = new System.Drawing.Point(130, 144);
             this.tbNumberRows.Name = "tbNumberRows";
             this.tbNumberRows.Size = new System.Drawing.Size(48, 20);
             this.tbNumberRows.TabIndex = 15;
@@ -222,7 +240,7 @@
             // cbClauses
             // 
             this.cbClauses.FormattingEnabled = true;
-            this.cbClauses.Location = new System.Drawing.Point(118, 59);
+            this.cbClauses.Location = new System.Drawing.Point(27, 49);
             this.cbClauses.Name = "cbClauses";
             this.cbClauses.Size = new System.Drawing.Size(121, 21);
             this.cbClauses.TabIndex = 16;
@@ -232,7 +250,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(216, 12);
+            this.label4.Location = new System.Drawing.Point(131, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 18);
             this.label4.TabIndex = 5;
@@ -241,75 +259,61 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(215, 136);
+            this.label8.Location = new System.Drawing.Point(126, 128);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 9;
             this.label8.Text = "No.  de filas";
             // 
-            // tbURLDataset
-            // 
-            this.tbURLDataset.AutoCompleteCustomSource.AddRange(new string[] {
-            " https://www.datos.gov.co/resource/ysq6-ri4e.json"});
-            this.tbURLDataset.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.tbURLDataset.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tbURLDataset.Location = new System.Drawing.Point(467, 3);
-            this.tbURLDataset.Name = "tbURLDataset";
-            this.tbURLDataset.Size = new System.Drawing.Size(387, 20);
-            this.tbURLDataset.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(285, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Agrege la URL del Dataset";
-            // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.btShowFields);
             this.panel2.Controls.Add(this.btDesmarkAll);
             this.panel2.Controls.Add(this.btMarkAll);
             this.panel2.Controls.Add(this.tlpFields);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(12, 34);
+            this.panel2.Location = new System.Drawing.Point(124, 41);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(514, 261);
-            this.panel2.TabIndex = 6;
+            this.panel2.Size = new System.Drawing.Size(474, 223);
+            this.panel2.TabIndex = 28;
             // 
             // btShowFields
             // 
+            this.btShowFields.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btShowFields.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btShowFields.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btShowFields.Location = new System.Drawing.Point(346, 182);
+            this.btShowFields.Location = new System.Drawing.Point(317, 182);
             this.btShowFields.Name = "btShowFields";
             this.btShowFields.Size = new System.Drawing.Size(141, 23);
             this.btShowFields.TabIndex = 21;
             this.btShowFields.Text = "Mostrar Campos";
-            this.btShowFields.UseVisualStyleBackColor = true;
-            this.btShowFields.Click += new System.EventHandler(this.btShowFields_Click);
+            this.btShowFields.UseVisualStyleBackColor = false;
             // 
             // btDesmarkAll
             // 
-            this.btDesmarkAll.Location = new System.Drawing.Point(355, 98);
+            this.btDesmarkAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btDesmarkAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDesmarkAll.Location = new System.Drawing.Point(335, 113);
             this.btDesmarkAll.Name = "btDesmarkAll";
             this.btDesmarkAll.Size = new System.Drawing.Size(100, 23);
             this.btDesmarkAll.TabIndex = 20;
             this.btDesmarkAll.Text = "Desmarcar Todos";
-            this.btDesmarkAll.UseVisualStyleBackColor = true;
+            this.btDesmarkAll.UseVisualStyleBackColor = false;
             this.btDesmarkAll.Click += new System.EventHandler(this.btDesmarkAll_Click);
             // 
             // btMarkAll
             // 
-            this.btMarkAll.Location = new System.Drawing.Point(355, 63);
+            this.btMarkAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btMarkAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMarkAll.Location = new System.Drawing.Point(335, 80);
             this.btMarkAll.Name = "btMarkAll";
             this.btMarkAll.Size = new System.Drawing.Size(100, 23);
             this.btMarkAll.TabIndex = 19;
             this.btMarkAll.Text = "Marcar Todos";
-            this.btMarkAll.UseVisualStyleBackColor = true;
+            this.btMarkAll.UseVisualStyleBackColor = false;
             this.btMarkAll.Click += new System.EventHandler(this.btMarkAll_Click);
             // 
             // tlpFields
@@ -332,7 +336,7 @@
             this.tlpFields.Controls.Add(this.checkBox7, 0, 11);
             this.tlpFields.Controls.Add(this.checkBox6, 1, 10);
             this.tlpFields.Controls.Add(this.checkBox17, 1, 12);
-            this.tlpFields.Location = new System.Drawing.Point(45, 21);
+            this.tlpFields.Location = new System.Drawing.Point(16, 22);
             this.tlpFields.Name = "tlpFields";
             this.tlpFields.RowCount = 16;
             this.tlpFields.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -357,7 +361,7 @@
             this.tlpFields.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpFields.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpFields.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpFields.Size = new System.Drawing.Size(295, 230);
+            this.tlpFields.Size = new System.Drawing.Size(295, 187);
             this.tlpFields.TabIndex = 18;
             this.tlpFields.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpFields_Paint);
             // 
@@ -521,124 +525,146 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "Marque las campos que desea ver";
             // 
-            // checkBox10
+            // panel3
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(170, 3);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(131, 14);
-            this.checkBox10.TabIndex = 9;
-            this.checkBox10.Text = "nombre_del_municipio";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.panel3.AutoSize = true;
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Location = new System.Drawing.Point(240, 6);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(685, 29);
+            this.panel3.TabIndex = 29;
             // 
-            // checkBox5
+            // label3
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(187, 135);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(54, 14);
-            this.checkBox5.TabIndex = 4;
-            this.checkBox5.Text = "latitud";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(51, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Agregue la URL del Dataset";
             // 
-            // btBack
+            // textBox1
             // 
-            this.btBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBack.Location = new System.Drawing.Point(327, 661);
-            this.btBack.Name = "btBack";
-            this.btBack.Size = new System.Drawing.Size(75, 23);
-            this.btBack.TabIndex = 8;
-            this.btBack.Text = "<<<";
-            this.btBack.UseVisualStyleBackColor = true;
+            this.textBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            " https://www.datos.gov.co/resource/ysq6-ri4e.json"});
+            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textBox1.Location = new System.Drawing.Point(233, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(387, 20);
+            this.textBox1.TabIndex = 10;
             // 
-            // btNext
+            // panel6
             // 
-            this.btNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btNext.Location = new System.Drawing.Point(792, 660);
-            this.btNext.Name = "btNext";
-            this.btNext.Size = new System.Drawing.Size(75, 23);
-            this.btNext.TabIndex = 9;
-            this.btNext.Text = ">>>";
-            this.btNext.UseVisualStyleBackColor = true;
-            // 
-            // btFirst
-            // 
-            this.btFirst.Location = new System.Drawing.Point(408, 661);
-            this.btFirst.Name = "btFirst";
-            this.btFirst.Size = new System.Drawing.Size(75, 23);
-            this.btFirst.TabIndex = 10;
-            this.btFirst.Text = "Primera";
-            this.btFirst.UseVisualStyleBackColor = true;
-            // 
-            // btLast
-            // 
-            this.btLast.Location = new System.Drawing.Point(711, 661);
-            this.btLast.Name = "btLast";
-            this.btLast.Size = new System.Drawing.Size(75, 23);
-            this.btLast.TabIndex = 11;
-            this.btLast.Text = "Última";
-            this.btLast.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(568, 666);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 13);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "0";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(587, 666);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(12, 13);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "/";
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel6.AutoSize = true;
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Controls.Add(this.btLast);
+            this.panel6.Controls.Add(this.btFirst);
+            this.panel6.Controls.Add(this.btNext);
+            this.panel6.Controls.Add(this.btBack);
+            this.panel6.Location = new System.Drawing.Point(140, 548);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(821, 30);
+            this.panel6.TabIndex = 30;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(605, 666);
+            this.label12.Location = new System.Drawing.Point(424, 9);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(13, 13);
-            this.label12.TabIndex = 14;
+            this.label12.TabIndex = 21;
             this.label12.Text = "0";
             // 
-            // panel5
+            // label11
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.tbURLDataset);
-            this.panel5.Location = new System.Drawing.Point(12, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1191, 30);
-            this.panel5.TabIndex = 22;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(406, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(12, 13);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "/";
             // 
-            // Interface
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(387, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(13, 13);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "0";
+            // 
+            // btLast
+            // 
+            this.btLast.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLast.Location = new System.Drawing.Point(530, 4);
+            this.btLast.Name = "btLast";
+            this.btLast.Size = new System.Drawing.Size(75, 23);
+            this.btLast.TabIndex = 18;
+            this.btLast.Text = "Última";
+            this.btLast.UseVisualStyleBackColor = false;
+            // 
+            // btFirst
+            // 
+            this.btFirst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btFirst.Location = new System.Drawing.Point(227, 4);
+            this.btFirst.Name = "btFirst";
+            this.btFirst.Size = new System.Drawing.Size(75, 23);
+            this.btFirst.TabIndex = 17;
+            this.btFirst.Text = "Primera";
+            this.btFirst.UseVisualStyleBackColor = false;
+            // 
+            // btNext
+            // 
+            this.btNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNext.Location = new System.Drawing.Point(611, 3);
+            this.btNext.Name = "btNext";
+            this.btNext.Size = new System.Drawing.Size(75, 23);
+            this.btNext.TabIndex = 16;
+            this.btNext.Text = ">>>";
+            this.btNext.UseVisualStyleBackColor = false;
+            // 
+            // btBack
+            // 
+            this.btBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBack.Location = new System.Drawing.Point(146, 4);
+            this.btBack.Name = "btBack";
+            this.btBack.Size = new System.Drawing.Size(75, 23);
+            this.btBack.TabIndex = 15;
+            this.btBack.Text = "<<<";
+            this.btBack.UseVisualStyleBackColor = false;
+            // 
+            // MainReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 686);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btLast);
-            this.Controls.Add(this.btFirst);
-            this.Controls.Add(this.btNext);
-            this.Controls.Add(this.btBack);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1072, 570);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.dataGridView1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Interface";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Análisis de Datos Calidad del Aire en Colombia";
-            this.Load += new System.EventHandler(this.Interface_Load);
+            this.Name = "MainReport";
+            this.Text = "MainReport";
+            this.Load += new System.EventHandler(this.MainReport_Load);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -646,8 +672,10 @@
             this.panel2.PerformLayout();
             this.tlpFields.ResumeLayout(false);
             this.tlpFields.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -655,56 +683,55 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox tbNumberRows;
-        private System.Windows.Forms.ComboBox cbFields;
-        private System.Windows.Forms.TextBox tbValue;
-        private System.Windows.Forms.TextBox tbURLDataset;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbURLDataset;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btFilter;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox cbSeparater;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbValue;
+        private System.Windows.Forms.ComboBox cbFields;
+        private System.Windows.Forms.TextBox tbNumberRows;
+        private System.Windows.Forms.ComboBox cbClauses;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btShowFields;
+        private System.Windows.Forms.Button btDesmarkAll;
+        private System.Windows.Forms.Button btMarkAll;
+        private System.Windows.Forms.TableLayoutPanel tlpFields;
         private System.Windows.Forms.CheckBox checkBox15;
+        private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox checkBox16;
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button btFilter;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btBack;
-        private System.Windows.Forms.Button btNext;
-        private System.Windows.Forms.ComboBox cbClauses;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TableLayoutPanel tlpFields;
-        private System.Windows.Forms.CheckBox checkBox16;
         private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.ComboBox cbSeparater;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btFirst;
-        private System.Windows.Forms.Button btLast;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btDesmarkAll;
-        private System.Windows.Forms.Button btMarkAll;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btShowFields;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btLast;
+        private System.Windows.Forms.Button btFirst;
+        private System.Windows.Forms.Button btNext;
+        private System.Windows.Forms.Button btBack;
     }
 }
-
