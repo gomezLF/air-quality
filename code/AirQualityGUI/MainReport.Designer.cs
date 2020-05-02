@@ -70,7 +70,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbURL = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -161,6 +161,7 @@
             this.btFilter.TabIndex = 0;
             this.btFilter.Text = "Filtrar";
             this.btFilter.UseVisualStyleBackColor = false;
+            this.btFilter.Click += new System.EventHandler(this.btFilter_Click);
             // 
             // panel4
             // 
@@ -291,6 +292,7 @@
             this.btShowFields.TabIndex = 21;
             this.btShowFields.Text = "Mostrar Campos";
             this.btShowFields.UseVisualStyleBackColor = false;
+            this.btShowFields.Click += new System.EventHandler(this.btShowFields_Click);
             // 
             // btDesmarkAll
             // 
@@ -530,7 +532,7 @@
             this.panel3.AutoSize = true;
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.tbURL);
             this.panel3.Location = new System.Drawing.Point(240, 6);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(685, 29);
@@ -546,16 +548,16 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Agregue la URL del Dataset";
             // 
-            // textBox1
+            // tbURL
             // 
-            this.textBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            this.tbURL.AutoCompleteCustomSource.AddRange(new string[] {
             " https://www.datos.gov.co/resource/ysq6-ri4e.json"});
-            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox1.Location = new System.Drawing.Point(233, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 20);
-            this.textBox1.TabIndex = 10;
+            this.tbURL.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.tbURL.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tbURL.Location = new System.Drawing.Point(233, 3);
+            this.tbURL.Name = "tbURL";
+            this.tbURL.Size = new System.Drawing.Size(387, 20);
+            this.tbURL.TabIndex = 10;
             // 
             // panel6
             // 
@@ -724,7 +726,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbURL;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;

@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
@@ -75,7 +70,6 @@ namespace AirQualityGUI
             maxPages = 0;
             rowsPerPage = 0;
 
-
             AddDataEntitiesComboBox();
             btShowFields.Enabled = false;
         }
@@ -109,10 +103,10 @@ namespace AirQualityGUI
             btShowFields.Enabled = false;
         }
 
-        private async Task btShowFields_ClickAsync(object sender, EventArgs e)
+        private async void btShowFields_Click(object sender, EventArgs e)
         {
             // Toma la url del dataset
-            url = tbURLDataset.Text + "?";
+            url = tbURL.Text + "?";
             // Verifica los campos seleccionados
             url_final = url;
             url_final += "$select=";
@@ -128,6 +122,7 @@ namespace AirQualityGUI
             url_final = url_final.TrimEnd(',');
 
             result = await getHttps(url_final);
+            Console.WriteLine(result);
             if (result == null || result.Equals(""))
             {
                 MessageBox.Show("El Dataset buscado no fue encontrado");
@@ -154,99 +149,7 @@ namespace AirQualityGUI
             }
         }
 
-        private async Task btFilter_ClickAsync(object sender, EventArgs e)
-        {
-            url_final = url;
-
-            // Agrega la clausula indicada a la url
-            if (!cbClauses.SelectedItem.Equals("Seleccione un clausula"))
-            {
-                if (cbClauses.SelectedItem.Equals("select"))
-                {
-                    url_final += "$" + cbClauses.SelectedItem + "=";
-
-                    if (!cbFields.SelectedItem.Equals("Seleccione un campo"))
-                    {
-                        url_final += cbFields.SelectedItem;
-                    }
-                    if (!cbSeparater.SelectedItem.Equals("Seleccione un separador"))
-                    {
-                        url_final += "  " + cbSeparater.SelectedItem;
-                    }
-                    if (!tbValue.Text.Equals(" "))
-                    {
-                        url_final += tbValue.Text;
-                    }
-
-                }
-                else if (cbClauses.SelectedItem.Equals("where"))
-                {
-                    url_final += "$" + cbClauses.SelectedItem + "=";
-
-                    if (!cbFields.SelectedItem.Equals("Seleccione un campo"))
-                    {
-                        url_final += cbFields.SelectedItem;
-                    }
-                    if (!cbSeparater.SelectedItem.Equals("Seleccione un separador"))
-                    {
-                        url_final += "  " + cbSeparater.SelectedItem + "  ";
-                    }
-                    if (!tbValue.Text.Equals(" "))
-                    {
-                        url_final += tbValue.Text;
-                    }
-
-                }
-                else if (cbClauses.SelectedItem.Equals("order"))
-                {
-                    url_final += "$" + cbClauses.SelectedItem + "=";
-
-                    if (!cbFields.SelectedItem.Equals("Seleccione un campo"))
-                    {
-                        url_final += cbFields.SelectedItem;
-                    }
-                    if (!cbSeparater.SelectedItem.Equals("Seleccione un separador"))
-                    {
-                        url_final += "  " + cbSeparater.SelectedItem;
-                    }
-                    if (!tbValue.Text.Equals(" "))
-                    {
-                        url_final += tbValue.Text;
-                    }
-
-                }
-
-                // Agrega el límite del número de filas
-                if (tbNumberRows.Text.Trim() != "")
-                {
-                    url_final += "&$limit=" + tbNumberRows.Text;
-                }
-
-                Console.WriteLine(url_final);
-
-                result = await getHttps(url_final);
-                url_final = "";
-
-                Console.WriteLine(url_final);
-
-                if (result == null || result.Equals(""))
-                {
-                    MessageBox.Show("El Dataset buscado no fue encontrado");
-                }
-
-                meditions = JsonConvert.DeserializeObject<List<Medition>>(result);
-                if (boxChecked == true)
-                {
-                    dataGridView1.DataSource = meditions;
-
-                }
-                else
-                {
-                    MessageBox.Show("Debe marcar algún campo");
-                }
-            }
-        }
-
+    
         private void cbClauses_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbSeparater.Items.Clear();
@@ -311,7 +214,99 @@ namespace AirQualityGUI
             }
         }
 
-     
-       
+        private async void btFilter_Click(object sender, EventArgs e)
+        {
+            url_final = url;
+
+            // Agrega la clausula indicada a la url
+            if (!cbClauses.SelectedItem.Equals("Seleccione un clausula"))
+            {
+                if (cbClauses.SelectedItem.Equals("select"))
+                {
+                    url_final += "$" + cbClauses.SelectedItem + "=";
+
+                    if (!cbFields.SelectedItem.Equals("Seleccione un campo"))
+                    {
+                        url_final += cbFields.SelectedItem;
+                    }
+                    if (!cbSeparater.SelectedItem.Equals("Seleccione un separador"))
+                    {
+                        url_final += "  " + cbSeparater.SelectedItem;
+                    }
+                    if (!tbValue.Text.Equals(" "))
+                    {
+                        url_final += tbValue.Text;
+                    }
+
+                }
+                else if (cbClauses.SelectedItem.Equals("where"))
+                {
+                    url_final += "$" + cbClauses.SelectedItem + "=";
+
+                    if (!cbFields.SelectedItem.Equals("Seleccione un campo"))
+                    {
+                        url_final += cbFields.SelectedItem;
+                    }
+                    if (!cbSeparater.SelectedItem.Equals("Seleccione un separador"))
+                    {
+                        url_final += "  " + cbSeparater.SelectedItem + "  ";
+                    }
+                    if (!tbValue.Text.Equals(" "))
+                    {
+                        url_final += tbValue.Text;
+                    }
+
+                }
+                else if (cbClauses.SelectedItem.Equals("order"))
+                {
+                    url_final += "$" + cbClauses.SelectedItem + "=";
+
+                    if (!cbFields.SelectedItem.Equals("Seleccione un campo"))
+                    {
+                        url_final += cbFields.SelectedItem;
+                    }
+                    if (!cbSeparater.SelectedItem.Equals("Seleccione un separador"))
+                    {
+                        url_final += "  " + cbSeparater.SelectedItem;
+                    }
+                    if (!tbValue.Text.Equals(" "))
+                    {
+                        url_final += tbValue.Text;
+                    }
+
+                }
+            }
+
+
+            // Agrega el límite del número de filas
+            if (tbNumberRows.Text.Trim() != "")
+            {
+                url_final += "&$limit=" + tbNumberRows.Text;
+            }
+
+            Console.WriteLine(url_final);
+
+            result = await getHttps(url_final);
+            url_final = "";
+
+            Console.WriteLine(url_final);
+
+            if (result == null || result.Equals(""))
+            {
+                MessageBox.Show("El Dataset buscado no fue encontrado");
+            }
+
+            meditions = JsonConvert.DeserializeObject<List<Medition>>(result);
+            if (boxChecked == true)
+            {
+                dataGridView1.DataSource = meditions;
+
+            }
+            else
+            {
+                MessageBox.Show("Debe marcar algún campo");
+            }
+
+        }
     }
 }
