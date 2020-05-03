@@ -18,3 +18,32 @@ E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\a
 E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\bin\Debug\model.pdb
 E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\bin\Debug\Newtonsoft.Json.xml
 E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.csproj.CopyComplete
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\AirQualityGUI.exe.config
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\AirQualityGUI.exe
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\AirQualityGUI.pdb
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\model.dll
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\model.pdb
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.csprojAssemblyReference.cache
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.FormInicial.resources
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.HotMapReport.resources
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.LevelConcentrationReport.resources
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.MainReport.resources
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.MonitoryStationReport.resources
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.Properties.Resources.resources
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.StudyPlaceReport.resources
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.csproj.GenerateResource.cache
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.csproj.CoreCompileInputs.cache
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.csproj.CopyComplete
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.exe
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.pdb
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.dll
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.pdb
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.xml
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.Wpf.xml
