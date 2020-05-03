@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelConcentrationReport));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbDepartments = new System.Windows.Forms.ComboBox();
             this.cbVariable = new System.Windows.Forms.ComboBox();
+            this.cbDepartments = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -50,20 +50,13 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.AutoSize = true;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.cbVariable);
             this.panel2.Controls.Add(this.cbDepartments);
             this.panel2.Location = new System.Drawing.Point(771, 194);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(289, 201);
             this.panel2.TabIndex = 1;
-            // 
-            // cbDepartments
-            // 
-            this.cbDepartments.FormattingEnabled = true;
-            this.cbDepartments.Location = new System.Drawing.Point(44, 51);
-            this.cbDepartments.Name = "cbDepartments";
-            this.cbDepartments.Size = new System.Drawing.Size(200, 21);
-            this.cbDepartments.TabIndex = 0;
             // 
             // cbVariable
             // 
@@ -73,10 +66,19 @@
             this.cbVariable.Size = new System.Drawing.Size(166, 21);
             this.cbVariable.TabIndex = 1;
             // 
+            // cbDepartments
+            // 
+            this.cbDepartments.FormattingEnabled = true;
+            this.cbDepartments.Location = new System.Drawing.Point(44, 51);
+            this.cbDepartments.Name = "cbDepartments";
+            this.cbDepartments.Size = new System.Drawing.Size(200, 21);
+            this.cbDepartments.TabIndex = 0;
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(252, 42);
             this.label1.Name = "label1";

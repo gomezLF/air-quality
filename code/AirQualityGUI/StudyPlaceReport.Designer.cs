@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudyPlaceReport));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cbDepartments = new System.Windows.Forms.ComboBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.btShowInfo = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.rbCompareToTwo = new System.Windows.Forms.RadioButton();
             this.rbHistorical = new System.Windows.Forms.RadioButton();
             this.rbProyection = new System.Windows.Forms.RadioButton();
-            this.rbCompareToTwo = new System.Windows.Forms.RadioButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cbDepartments = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +54,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.AutoSize = true;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -62,21 +63,13 @@
             this.panel1.Size = new System.Drawing.Size(862, 81);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.Controls.Add(this.cbDepartments);
-            this.panel2.Location = new System.Drawing.Point(37, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(231, 75);
-            this.panel2.TabIndex = 0;
-            // 
-            // cbDepartments
-            // 
-            this.cbDepartments.FormattingEnabled = true;
-            this.cbDepartments.Location = new System.Drawing.Point(16, 25);
-            this.cbDepartments.Name = "cbDepartments";
-            this.cbDepartments.Size = new System.Drawing.Size(187, 21);
-            this.cbDepartments.TabIndex = 0;
+            this.panel4.Controls.Add(this.btShowInfo);
+            this.panel4.Location = new System.Drawing.Point(625, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(197, 72);
+            this.panel4.TabIndex = 2;
             // 
             // btShowInfo
             // 
@@ -87,6 +80,27 @@
             this.btShowInfo.TabIndex = 1;
             this.btShowInfo.Text = "Mostrar Información";
             this.btShowInfo.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.rbCompareToTwo);
+            this.panel3.Controls.Add(this.rbHistorical);
+            this.panel3.Controls.Add(this.rbProyection);
+            this.panel3.Location = new System.Drawing.Point(275, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(331, 74);
+            this.panel3.TabIndex = 1;
+            // 
+            // rbCompareToTwo
+            // 
+            this.rbCompareToTwo.AutoSize = true;
+            this.rbCompareToTwo.Location = new System.Drawing.Point(49, 48);
+            this.rbCompareToTwo.Name = "rbCompareToTwo";
+            this.rbCompareToTwo.Size = new System.Drawing.Size(212, 17);
+            this.rbCompareToTwo.TabIndex = 3;
+            this.rbCompareToTwo.TabStop = true;
+            this.rbCompareToTwo.Text = "Comparación Históricos vs Proyectados";
+            this.rbCompareToTwo.UseVisualStyleBackColor = true;
             // 
             // rbHistorical
             // 
@@ -110,34 +124,21 @@
             this.rbProyection.Text = "Datos Proyectados";
             this.rbProyection.UseVisualStyleBackColor = true;
             // 
-            // rbCompareToTwo
+            // panel2
             // 
-            this.rbCompareToTwo.AutoSize = true;
-            this.rbCompareToTwo.Location = new System.Drawing.Point(49, 48);
-            this.rbCompareToTwo.Name = "rbCompareToTwo";
-            this.rbCompareToTwo.Size = new System.Drawing.Size(212, 17);
-            this.rbCompareToTwo.TabIndex = 3;
-            this.rbCompareToTwo.TabStop = true;
-            this.rbCompareToTwo.Text = "Comparación Históricos vs Proyectados";
-            this.rbCompareToTwo.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.cbDepartments);
+            this.panel2.Location = new System.Drawing.Point(37, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(231, 75);
+            this.panel2.TabIndex = 0;
             // 
-            // panel3
+            // cbDepartments
             // 
-            this.panel3.Controls.Add(this.rbCompareToTwo);
-            this.panel3.Controls.Add(this.rbHistorical);
-            this.panel3.Controls.Add(this.rbProyection);
-            this.panel3.Location = new System.Drawing.Point(275, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(331, 74);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btShowInfo);
-            this.panel4.Location = new System.Drawing.Point(625, 6);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(197, 72);
-            this.panel4.TabIndex = 2;
+            this.cbDepartments.FormattingEnabled = true;
+            this.cbDepartments.Location = new System.Drawing.Point(16, 25);
+            this.cbDepartments.Name = "cbDepartments";
+            this.cbDepartments.Size = new System.Drawing.Size(187, 21);
+            this.cbDepartments.TabIndex = 0;
             // 
             // panel5
             // 
@@ -149,6 +150,15 @@
             this.panel5.Size = new System.Drawing.Size(904, 230);
             this.panel5.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(404, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Datos históricos";
+            // 
             // panel6
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -158,15 +168,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(904, 224);
             this.panel6.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(404, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Datos históricos";
             // 
             // label2
             // 
@@ -191,10 +192,10 @@
             this.Name = "StudyPlaceReport";
             this.Text = "StudyPlaceReport";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);

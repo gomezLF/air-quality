@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Air Quality.cs">
+    <Compile Include="AirQualityGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Air Quality.Designer.cs">
-      <DependentUpon>Air Quality.cs</DependentUpon>
+    <Compile Include="AirQualityGUI.Designer.cs">
+      <DependentUpon>AirQualityGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="HotMapReport.cs">
       <SubType>Form</SubType>
@@ -87,8 +87,8 @@
     <Compile Include="StudyPlaceReport.Designer.cs">
       <DependentUpon>StudyPlaceReport.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Air Quality.resx">
-      <DependentUpon>Air Quality.cs</DependentUpon>
+    <EmbeddedResource Include="AirQualityGUI.resx">
+      <DependentUpon>AirQualityGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HotMapReport.resx">
       <DependentUpon>HotMapReport.cs</DependentUpon>

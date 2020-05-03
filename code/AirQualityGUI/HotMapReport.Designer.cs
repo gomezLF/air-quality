@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HotMapReport));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.cbDepartments = new System.Windows.Forms.ComboBox();
-            this.rbShowDateHistorical = new System.Windows.Forms.RadioButton();
             this.rbShowDateProyection = new System.Windows.Forms.RadioButton();
-            this.rbColombiaHotMap = new System.Windows.Forms.RadioButton();
+            this.rbShowDateHistorical = new System.Windows.Forms.RadioButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.rbDepartmentHotMap = new System.Windows.Forms.RadioButton();
+            this.rbColombiaHotMap = new System.Windows.Forms.RadioButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btShowMap = new System.Windows.Forms.Button();
+            this.cbDepartments = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -48,53 +48,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.rbShowDateProyection);
             this.panel1.Controls.Add(this.rbShowDateHistorical);
             this.panel1.Location = new System.Drawing.Point(14, 86);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(283, 99);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel2.Controls.Add(this.rbDepartmentHotMap);
-            this.panel2.Controls.Add(this.rbColombiaHotMap);
-            this.panel2.Location = new System.Drawing.Point(14, 204);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(283, 128);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btShowMap);
-            this.panel3.Controls.Add(this.cbDepartments);
-            this.panel3.Location = new System.Drawing.Point(14, 349);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(283, 116);
-            this.panel3.TabIndex = 2;
-            // 
-            // cbDepartments
-            // 
-            this.cbDepartments.FormattingEnabled = true;
-            this.cbDepartments.Items.AddRange(new object[] {
-            "Seleccione un Departamento"});
-            this.cbDepartments.Location = new System.Drawing.Point(62, 13);
-            this.cbDepartments.Name = "cbDepartments";
-            this.cbDepartments.Size = new System.Drawing.Size(204, 21);
-            this.cbDepartments.TabIndex = 0;
-            // 
-            // rbShowDateHistorical
-            // 
-            this.rbShowDateHistorical.AutoSize = true;
-            this.rbShowDateHistorical.Location = new System.Drawing.Point(77, 16);
-            this.rbShowDateHistorical.Name = "rbShowDateHistorical";
-            this.rbShowDateHistorical.Size = new System.Drawing.Size(140, 17);
-            this.rbShowDateHistorical.TabIndex = 0;
-            this.rbShowDateHistorical.TabStop = true;
-            this.rbShowDateHistorical.Text = "Mostrar Datos Históricos";
-            this.rbShowDateHistorical.UseVisualStyleBackColor = true;
             // 
             // rbShowDateProyection
             // 
@@ -107,16 +67,26 @@
             this.rbShowDateProyection.Text = "Mostrar proyección de datos";
             this.rbShowDateProyection.UseVisualStyleBackColor = true;
             // 
-            // rbColombiaHotMap
+            // rbShowDateHistorical
             // 
-            this.rbColombiaHotMap.AutoSize = true;
-            this.rbColombiaHotMap.Location = new System.Drawing.Point(62, 33);
-            this.rbColombiaHotMap.Name = "rbColombiaHotMap";
-            this.rbColombiaHotMap.Size = new System.Drawing.Size(155, 17);
-            this.rbColombiaHotMap.TabIndex = 0;
-            this.rbColombiaHotMap.TabStop = true;
-            this.rbColombiaHotMap.Text = "Mapa de Calor de Calombia";
-            this.rbColombiaHotMap.UseVisualStyleBackColor = true;
+            this.rbShowDateHistorical.AutoSize = true;
+            this.rbShowDateHistorical.Location = new System.Drawing.Point(77, 16);
+            this.rbShowDateHistorical.Name = "rbShowDateHistorical";
+            this.rbShowDateHistorical.Size = new System.Drawing.Size(140, 17);
+            this.rbShowDateHistorical.TabIndex = 0;
+            this.rbShowDateHistorical.TabStop = true;
+            this.rbShowDateHistorical.Text = "Mostrar Datos Históricos";
+            this.rbShowDateHistorical.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.rbDepartmentHotMap);
+            this.panel2.Controls.Add(this.rbColombiaHotMap);
+            this.panel2.Location = new System.Drawing.Point(14, 204);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(283, 128);
+            this.panel2.TabIndex = 1;
             // 
             // rbDepartmentHotMap
             // 
@@ -129,6 +99,26 @@
             this.rbDepartmentHotMap.Text = "Mapa de Calor por Departamentos";
             this.rbDepartmentHotMap.UseVisualStyleBackColor = true;
             // 
+            // rbColombiaHotMap
+            // 
+            this.rbColombiaHotMap.AutoSize = true;
+            this.rbColombiaHotMap.Location = new System.Drawing.Point(62, 33);
+            this.rbColombiaHotMap.Name = "rbColombiaHotMap";
+            this.rbColombiaHotMap.Size = new System.Drawing.Size(155, 17);
+            this.rbColombiaHotMap.TabIndex = 0;
+            this.rbColombiaHotMap.TabStop = true;
+            this.rbColombiaHotMap.Text = "Mapa de Calor de Calombia";
+            this.rbColombiaHotMap.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btShowMap);
+            this.panel3.Controls.Add(this.cbDepartments);
+            this.panel3.Location = new System.Drawing.Point(14, 349);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(283, 116);
+            this.panel3.TabIndex = 2;
+            // 
             // btShowMap
             // 
             this.btShowMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
@@ -139,10 +129,21 @@
             this.btShowMap.Text = "Mostrar";
             this.btShowMap.UseVisualStyleBackColor = false;
             // 
+            // cbDepartments
+            // 
+            this.cbDepartments.FormattingEnabled = true;
+            this.cbDepartments.Items.AddRange(new object[] {
+            "Seleccione un Departamento"});
+            this.cbDepartments.Location = new System.Drawing.Point(62, 13);
+            this.cbDepartments.Name = "cbDepartments";
+            this.cbDepartments.Size = new System.Drawing.Size(204, 21);
+            this.cbDepartments.TabIndex = 0;
+            // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.AutoSize = true;
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Controls.Add(this.panel1);

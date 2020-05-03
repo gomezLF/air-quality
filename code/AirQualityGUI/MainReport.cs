@@ -11,11 +11,8 @@ namespace AirQualityGUI
 {
     public partial class MainReport : Form
     {
-        private string url;
-        private string url_final;
+        private AirQuality airQuality;
 
-        private List<Medition> meditions;
-        private string result;
         private Boolean boxChecked = false;
 
         private DataGridView totalData;
@@ -27,6 +24,7 @@ namespace AirQualityGUI
         public MainReport()
         {
             InitializeComponent();
+            airQuality = new AirQuality();
         }
 
         // Agre los componentes de los combobox a sus respectivos.
@@ -35,24 +33,6 @@ namespace AirQualityGUI
 
             cbFields.Items.Add("Seleccione un campo");
             cbFields.SelectedIndex = 0;
-
-            /**
-            cbFields.Items.Add("fecha");
-            cbFields.Items.Add("autoridad_ambiental");
-            cbFields.Items.Add("nombre_de_la_estaci_n");
-            cbFields.Items.Add("tecnolog_a");
-            cbFields.Items.Add("latitud");
-            cbFields.Items.Add("longitud");
-            cbFields.Items.Add("c_digo_del_departamento");
-            cbFields.Items.Add("departamento");
-            cbFields.Items.Add("c_digo_del_municipio");
-            cbFields.Items.Add("nombre_del_municipio");
-            cbFields.Items.Add("tipo_de_estaci_n");
-            cbFields.Items.Add("tiempo_de_exposici_n");
-            cbFields.Items.Add("variable");
-            cbFields.Items.Add("unidades");
-            cbFields.Items.Add("concentraci_n");
-            **/
 
             cbClauses.Items.Add("Seleccione un clausula");
             cbClauses.SelectedIndex = 0;
@@ -74,15 +54,7 @@ namespace AirQualityGUI
             btShowFields.Enabled = false;
         }
 
-        // Obtiene los datos de la url 
-        public async Task<string> getHttps(String url_f)
-        {
-            WebRequest request = WebRequest.Create(url_f);
-            WebResponse response = request.GetResponse();
-            StreamReader sr = new StreamReader(response.GetResponseStream());
-            return await sr.ReadToEndAsync();
-        }
-
+       
         private void btMarkAll_Click(object sender, EventArgs e)
         {
             foreach (Control c in tlpFields.Controls)
@@ -105,39 +77,36 @@ namespace AirQualityGUI
 
         private async void btShowFields_Click(object sender, EventArgs e)
         {
-            // Toma la url del dataset
-            url = tbURL.Text + "?";
-            // Verifica los campos seleccionados
-            url_final = url;
-            url_final += "$select=";
+            airQuality.URL += "$select=";
             foreach (Control c in tlpFields.Controls)
             {
                 CheckBox cb = (CheckBox)c;
                 if (cb.Checked)
                 {
-                    url_final += cb.Text + ",";
+                    airQuality.URL += cb.Text + ",";
                     boxChecked = true;
                 }
             }
-            url_final = url_final.TrimEnd(',');
 
-            result = await getHttps(url_final);
-            Console.WriteLine(result);
-            if (result == null || result.Equals(""))
+            airQuality.URL = airQuality.URL.TrimEnd(',');
+            airQuality.ResultResponse = await airQuality.getHttps(airQuality.URL);
+            
+            Console.WriteLine(airQuality.ResultResponse);
+
+            if (airQuality.ResultResponse == null || airQuality.ResultResponse.Equals(""))
             {
                 MessageBox.Show("El Dataset buscado no fue encontrado");
             }
 
-            meditions = JsonConvert.DeserializeObject<List<Medition>>(result);
+            airQuality.Meditions = JsonConvert.DeserializeObject<List<Medition>>(airQuality.ResultResponse);
             if (boxChecked == true)
             {
-                dataGridView1.DataSource = meditions;
+                dataGridView1.DataSource = airQuality.Meditions;
             }
             else
             {
                 MessageBox.Show("Debe marcar algún campo");
             }
-
 
             foreach (Control c in tlpFields.Controls)
             {
@@ -205,7 +174,6 @@ namespace AirQualityGUI
             }
         }
 
-
         private void cbFields_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbClauses.SelectedIndex == 0)
@@ -216,64 +184,63 @@ namespace AirQualityGUI
 
         private async void btFilter_Click(object sender, EventArgs e)
         {
-            url_final = url;
+            airQuality.UrlFinal = airQuality.UrlIntermediative;
 
             // Agrega la clausula indicada a la url
             if (!cbClauses.SelectedItem.Equals("Seleccione un clausula"))
             {
                 if (cbClauses.SelectedItem.Equals("select"))
                 {
-                    url_final += "$" + cbClauses.SelectedItem + "=";
+                    airQuality.UrlFinal += "$" + cbClauses.SelectedItem + "=";
 
                     if (!cbFields.SelectedItem.Equals("Seleccione un campo"))
                     {
-                        url_final += cbFields.SelectedItem;
+                        airQuality.UrlFinal += cbFields.SelectedItem;
                     }
                     if (!cbSeparater.SelectedItem.Equals("Seleccione un separador"))
                     {
-                        url_final += "  " + cbSeparater.SelectedItem;
+                        airQuality.UrlFinal += "  " + cbSeparater.SelectedItem;
                     }
                     if (!tbValue.Text.Equals(" "))
                     {
-                        url_final += tbValue.Text;
+                        airQuality.UrlFinal += tbValue.Text;
                     }
 
                 }
                 else if (cbClauses.SelectedItem.Equals("where"))
                 {
-                    url_final += "$" + cbClauses.SelectedItem + "=";
+                    airQuality.UrlFinal += "$" + cbClauses.SelectedItem + "=";
 
                     if (!cbFields.SelectedItem.Equals("Seleccione un campo"))
                     {
-                        url_final += cbFields.SelectedItem;
+                        airQuality.UrlFinal += cbFields.SelectedItem;
                     }
                     if (!cbSeparater.SelectedItem.Equals("Seleccione un separador"))
                     {
-                        url_final += "  " + cbSeparater.SelectedItem + "  ";
+                        airQuality.UrlFinal += "  " + cbSeparater.SelectedItem + "  ";
                     }
                     if (!tbValue.Text.Equals(" "))
                     {
-                        url_final += tbValue.Text;
+                        airQuality.UrlFinal += tbValue.Text;
                     }
 
                 }
                 else if (cbClauses.SelectedItem.Equals("order"))
                 {
-                    url_final += "$" + cbClauses.SelectedItem + "=";
+                    airQuality.UrlFinal += "$" + cbClauses.SelectedItem + "=";
 
                     if (!cbFields.SelectedItem.Equals("Seleccione un campo"))
                     {
-                        url_final += cbFields.SelectedItem;
+                        airQuality.UrlFinal += cbFields.SelectedItem;
                     }
                     if (!cbSeparater.SelectedItem.Equals("Seleccione un separador"))
                     {
-                        url_final += "  " + cbSeparater.SelectedItem;
+                        airQuality.UrlFinal += "  " + cbSeparater.SelectedItem;
                     }
                     if (!tbValue.Text.Equals(" "))
                     {
-                        url_final += tbValue.Text;
+                        airQuality.UrlFinal += tbValue.Text;
                     }
-
                 }
             }
 
@@ -281,25 +248,25 @@ namespace AirQualityGUI
             // Agrega el límite del número de filas
             if (tbNumberRows.Text.Trim() != "")
             {
-                url_final += "&$limit=" + tbNumberRows.Text;
+                airQuality.UrlFinal += "&$limit=" + tbNumberRows.Text;
             }
 
-            Console.WriteLine(url_final);
+            Console.WriteLine(airQuality.UrlFinal);
 
-            result = await getHttps(url_final);
-            url_final = "";
+            airQuality.ResultResponse = await airQuality.getHttps(airQuality.UrlFinal);
+            airQuality.UrlFinal = "";
 
-            Console.WriteLine(url_final);
+            Console.WriteLine(airQuality.UrlFinal);
 
-            if (result == null || result.Equals(""))
+            if (airQuality.ResultResponse == null || airQuality.ResultResponse.Equals(""))
             {
                 MessageBox.Show("El Dataset buscado no fue encontrado");
             }
 
-            meditions = JsonConvert.DeserializeObject<List<Medition>>(result);
+            airQuality.Meditions = JsonConvert.DeserializeObject<List<Medition>>(airQuality.ResultResponse);
             if (boxChecked == true)
             {
-                dataGridView1.DataSource = meditions;
+                dataGridView1.DataSource = airQuality.Meditions;
 
             }
             else
