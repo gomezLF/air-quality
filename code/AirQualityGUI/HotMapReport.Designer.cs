@@ -39,7 +39,7 @@
             this.btShowMap = new System.Windows.Forms.Button();
             this.cbDepartments = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.mapGenerator = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -151,17 +151,15 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(313, 533);
             this.panel4.TabIndex = 3;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // panel5
+            // mapGenerator
             // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel5.AutoSize = true;
-            this.panel5.Location = new System.Drawing.Point(32, 25);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(709, 545);
-            this.panel5.TabIndex = 4;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            this.mapGenerator.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mapGenerator.AutoSize = true;
+            this.mapGenerator.Location = new System.Drawing.Point(32, 25);
+            this.mapGenerator.Name = "mapGenerator";
+            this.mapGenerator.Size = new System.Drawing.Size(709, 545);
+            this.mapGenerator.TabIndex = 4;
             // 
             // HotMapReport
             // 
@@ -171,7 +169,7 @@
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1072, 570);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.mapGenerator);
             this.Controls.Add(this.panel4);
             this.Name = "HotMapReport";
             this.Text = "HotMapReport";
@@ -198,6 +196,6 @@
         private System.Windows.Forms.RadioButton rbColombiaHotMap;
         private System.Windows.Forms.Button btShowMap;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel mapGenerator;
     }
 }
