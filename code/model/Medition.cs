@@ -9,7 +9,6 @@ namespace model
     // Clase contenedora de los datos recibidos del dataset
     public class Medition
     {
-
         public string fecha { get; set; }
         public string autoridad_ambiental { get; set; }
         public string nombre_de_la_estaci_n { get; set; }

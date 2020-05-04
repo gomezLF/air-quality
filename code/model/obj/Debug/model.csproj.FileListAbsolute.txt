@@ -9,3 +9,7 @@ C:\Users\Windows 10\source\repos\air-quality\code\model\obj\Debug\model.csprojAs
 C:\Users\Windows 10\source\repos\air-quality\code\model\obj\Debug\model.csproj.CoreCompileInputs.cache
 C:\Users\Windows 10\source\repos\air-quality\code\model\obj\Debug\model.dll
 C:\Users\Windows 10\source\repos\air-quality\code\model\obj\Debug\model.pdb
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\model\obj\Debug\model.csprojAssemblyReference.cache
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\model\bin\Debug\Newtonsoft.Json.dll
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\model\bin\Debug\Newtonsoft.Json.xml
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\model\obj\Debug\model.csproj.CopyComplete

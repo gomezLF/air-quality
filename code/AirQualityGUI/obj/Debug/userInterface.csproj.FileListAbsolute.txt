@@ -48,3 +48,13 @@ C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\userIn
 C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.exe
 C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\obj\Debug\AirQualityGUI.pdb
 C:\Users\Windows 10\source\repos\air-quality\code\AirQualityGUI\bin\Debug\Colombia.xml
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\bin\Debug\Colombia.xml
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.dll
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.WinForms.dll
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.Wpf.dll
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.pdb
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.xml
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.WinForms.pdb
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.WinForms.xml
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.Wpf.pdb
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\AirQualityGUI\bin\Debug\LiveCharts.Wpf.xml

@@ -25,13 +25,14 @@ namespace AirQualityGUI
 {
     public partial class FormInicial : Form
     {
-
+        private AirQuality airQuality;
         public FormInicial()
         {
             InitializeComponent();
             //Estas lineas eliminan los parpadeos del formulario o controles en la interfaz grafica (Pero no en un 100%)
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
+            airQuality = new AirQuality();
         }
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
@@ -135,8 +136,10 @@ namespace AirQualityGUI
 
 
         #region Manejo Reportes
+
         // Abrir Los reportes
-        private Form openReport<MyReport>() where MyReport : Form, new()
+
+        public Form OpenReport<MyReport>() where MyReport : Form, new()
         {
             Form currentReport;
             currentReport = panelFondoForms.Controls.OfType<MyReport>().FirstOrDefault();//Busca en la colecion el formulario
@@ -152,7 +155,7 @@ namespace AirQualityGUI
                 currentReport.Show();
                 currentReport.BringToFront();
             }
-            //si el reporte/instancia existe
+            //si el reporte/ existe
             else
             {
                 currentReport.BringToFront();
@@ -160,21 +163,43 @@ namespace AirQualityGUI
 
             return currentReport;
         }
+       
+
+        /**
+        private Form OpenReports(object reportForm)
+        {
+            if (this.panelFondoForms.Controls.Count > 0)
+                this.panelFondoForms.Controls.RemoveAt(0);
+            Form currentReport = reportForm as Form;
+            currentReport.TopLevel = false;
+            currentReport.Dock = DockStyle.Fill;
+            this.panelFondoForms.Controls.Add(currentReport);
+            this.panelFondoForms.Tag = currentReport;
+            currentReport.Show();
+
+            return currentReport;
+        }
+        */
+
 
         private void btMainReport_Click(object sender, EventArgs e)
         {
-            Form cForm = openReport<MainReport>();
+            Form cForm = OpenReport<MainReport>();
+            
            
         }
 
         private void btHotMapReport_Click(object sender, EventArgs e)
         {
-            Form cForm = openReport<HotMapReport>();
+            Form cForm = OpenReport<HotMapReport>();
+
+            
         }
 
         private void btStudyPlaceReport_Click(object sender, EventArgs e)
         {
-            Form cForm = openReport<StudyPlaceReport>();
+           Form cForm = OpenReport<StudyPlaceReport>();
+
         }
 
         private void panelFondoForms_Paint(object sender, PaintEventArgs e)
@@ -184,12 +209,14 @@ namespace AirQualityGUI
 
         private void btLevelConcentrationReport_Click(object sender, EventArgs e)
         {
-            Form cForm = openReport<LevelConcentrationReport>();
+            Form cForm = OpenReport<LevelConcentrationReport>();
+
         }
 
         private void btMonitoryStationReport_Click(object sender, EventArgs e)
         {
-            Form cForm = openReport<MonitoryStationReport>();
+            Form cForm = OpenReport<MonitoryStationReport>();
+
         }
         #endregion
 

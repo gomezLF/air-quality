@@ -24,7 +24,11 @@ namespace AirQualityGUI
         public MainReport()
         {
             InitializeComponent();
-            airQuality = new AirQuality();
+           // airQuality = new AirQuality();
+        }
+
+        public void InitAirQuality(AirQuality airQuality) {
+            this.airQuality = airQuality;
         }
 
         // Agre los componentes de los combobox a sus respectivos.
@@ -99,6 +103,11 @@ namespace AirQualityGUI
             }
 
             airQuality.Meditions = JsonConvert.DeserializeObject<List<Medition>>(airQuality.ResultResponse);
+
+            foreach (Medition medition in airQuality.Meditions) {
+                Console.WriteLine(medition);
+            }
+            
             if (boxChecked == true)
             {
                 dataGridView1.DataSource = airQuality.Meditions;
@@ -116,6 +125,8 @@ namespace AirQualityGUI
                     cbFields.Items.Add(cb.Text);
                 }
             }
+
+            airQuality.URL = airQuality.UrlIntermediative;
         }
 
     
