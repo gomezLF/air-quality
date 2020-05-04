@@ -3,3 +3,9 @@ E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\a
 E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\model\obj\Debug\model.csproj.CoreCompileInputs.cache
 E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\model\obj\Debug\model.dll
 E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\model\obj\Debug\model.pdb
+C:\Users\Windows 10\source\repos\air-quality\code\model\bin\Debug\model.dll
+C:\Users\Windows 10\source\repos\air-quality\code\model\bin\Debug\model.pdb
+C:\Users\Windows 10\source\repos\air-quality\code\model\obj\Debug\model.csprojAssemblyReference.cache
+C:\Users\Windows 10\source\repos\air-quality\code\model\obj\Debug\model.csproj.CoreCompileInputs.cache
+C:\Users\Windows 10\source\repos\air-quality\code\model\obj\Debug\model.dll
+C:\Users\Windows 10\source\repos\air-quality\code\model\obj\Debug\model.pdb

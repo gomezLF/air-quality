@@ -7,24 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LiveCharts.WinForms;
+
 
 namespace AirQualityGUI
 {
     public partial class HotMapReport : Form
     {
+        private GeoMap heatMap;
+
         public HotMapReport()
         {
             InitializeComponent();
+
+            this.heatMap = new GeoMap();
+
+            PrintHeatMap();
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
+        private void PrintHeatMap()
         {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
+            this.heatMap.Source = $"{Application.StartupPath}\\Colombia.xml";
+            this.mapGenerator.Controls.Add(this.heatMap);
+            this.heatMap.Dock = DockStyle.Fill;
         }
     }
 }
