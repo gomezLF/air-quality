@@ -25,7 +25,21 @@ namespace AirQualityGUI
 {
     public partial class FormInicial : Form
     {
+
+        private const String MAIN_REPORT = "MR";
+        private const String HEATMAP_REPORT = "HR";
+        private const String LEVEL_CONCENTRATION_REPORT = "LCR";
+        private const String MONITORY_STATION_REPORT = "MSR";
+        private const String STUDY_PLACE_REPORT = "SPR";
+
         private AirQuality airQuality;
+
+        private MainReport mainReport;
+        private HotMapReport hotMapReport;
+        private LevelConcentrationReport levelConcentrationReport;
+        private MonitoryStationReport monitoryStationReport;
+        private StudyPlaceReport studyPlaceReport;
+
         public FormInicial()
         {
             InitializeComponent();
@@ -36,6 +50,12 @@ namespace AirQualityGUI
         }
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void panelFondoForms_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -138,84 +158,99 @@ namespace AirQualityGUI
         #region Manejo Reportes
 
         // Abrir Los reportes
-
-        public Form OpenReport<MyReport>() where MyReport : Form, new()
-        {
-            Form currentReport;
-            currentReport = panelFondoForms.Controls.OfType<MyReport>().FirstOrDefault();//Busca en la colecion el formulario
-                                                                                     //si el formulario/instancia no existe
-            if (currentReport == null)
-            {
-                currentReport = new MyReport();
-                currentReport.TopLevel = false;
-                currentReport.FormBorderStyle = FormBorderStyle.None;
-                currentReport.Dock = DockStyle.Fill;
-                panelFondoForms.Controls.Add(currentReport);
-                panelFondoForms.Tag = currentReport;
-                currentReport.Show();
-                currentReport.BringToFront();
-            }
-            //si el reporte/ existe
-            else
-            {
-                currentReport.BringToFront();
-            }
-
-            return currentReport;
-        }
-       
-
-        /**
-        private Form OpenReports(object reportForm)
-        {
-            if (this.panelFondoForms.Controls.Count > 0)
-                this.panelFondoForms.Controls.RemoveAt(0);
-            Form currentReport = reportForm as Form;
-            currentReport.TopLevel = false;
-            currentReport.Dock = DockStyle.Fill;
-            this.panelFondoForms.Controls.Add(currentReport);
-            this.panelFondoForms.Tag = currentReport;
-            currentReport.Show();
-
-            return currentReport;
-        }
-        */
-
+        
 
         private void btMainReport_Click(object sender, EventArgs e)
         {
-            Form cForm = OpenReport<MainReport>();
-            
-           
+            if (this.mainReport == null)
+            {
+                this.mainReport = new MainReport();
+            }
+
+            this.mainReport.InitAirQuality(airQuality);
+            mainReport.TopLevel = false;
+            mainReport.FormBorderStyle = FormBorderStyle.None;
+            mainReport.Dock = DockStyle.Fill;
+
+            panelFondoForms.Controls.Add(mainReport);
+            panelFondoForms.Tag = mainReport;
+            mainReport.Show();
+            mainReport.BringToFront();
         }
 
         private void btHotMapReport_Click(object sender, EventArgs e)
         {
-            Form cForm = OpenReport<HotMapReport>();
+            if (this.hotMapReport == null)
+            {
+                this.hotMapReport = new HotMapReport();
+            }
 
-            
+            this.hotMapReport.InitAirQuality(airQuality);
+            hotMapReport.TopLevel = false;
+            hotMapReport.FormBorderStyle = FormBorderStyle.None;
+            hotMapReport.Dock = DockStyle.Fill;
+
+            panelFondoForms.Controls.Add(mainReport);
+            panelFondoForms.Tag = mainReport;
+            hotMapReport.Show();
+            hotMapReport.BringToFront();
+
         }
 
         private void btStudyPlaceReport_Click(object sender, EventArgs e)
         {
-           Form cForm = OpenReport<StudyPlaceReport>();
+            if (this.studyPlaceReport == null)
+            {
+                this.studyPlaceReport = new StudyPlaceReport();
+            }
 
-        }
+            this.studyPlaceReport.InitAirQuality(airQuality);
+            studyPlaceReport.TopLevel = false;
+            studyPlaceReport.FormBorderStyle = FormBorderStyle.None;
+            studyPlaceReport.Dock = DockStyle.Fill;
 
-        private void panelFondoForms_Paint(object sender, PaintEventArgs e)
-        {
+            panelFondoForms.Controls.Add(mainReport);
+            panelFondoForms.Tag = mainReport;
+            studyPlaceReport.Show();
+            studyPlaceReport.BringToFront();
 
         }
 
         private void btLevelConcentrationReport_Click(object sender, EventArgs e)
         {
-            Form cForm = OpenReport<LevelConcentrationReport>();
+            if (this.levelConcentrationReport == null)
+            {
+                this.levelConcentrationReport = new LevelConcentrationReport();
+            }
+
+            this.levelConcentrationReport.InitAirQuality(airQuality);
+            levelConcentrationReport.TopLevel = false;
+            levelConcentrationReport.FormBorderStyle = FormBorderStyle.None;
+            levelConcentrationReport.Dock = DockStyle.Fill;
+
+            panelFondoForms.Controls.Add(mainReport);
+            panelFondoForms.Tag = mainReport;
+            levelConcentrationReport.Show();
+            levelConcentrationReport.BringToFront();
 
         }
 
         private void btMonitoryStationReport_Click(object sender, EventArgs e)
         {
-            Form cForm = OpenReport<MonitoryStationReport>();
+            if (this.monitoryStationReport == null)
+            {
+                this.monitoryStationReport = new MonitoryStationReport();
+            }
+
+            this.monitoryStationReport.InitAirQuality(airQuality);
+            monitoryStationReport.TopLevel = false;
+            monitoryStationReport.FormBorderStyle = FormBorderStyle.None;
+            monitoryStationReport.Dock = DockStyle.Fill;
+
+            panelFondoForms.Controls.Add(mainReport);
+            panelFondoForms.Tag = mainReport;
+            monitoryStationReport.Show();
+            monitoryStationReport.BringToFront();
 
         }
         #endregion

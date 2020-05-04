@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LiveCharts.WinForms;
-
+using model;
 
 namespace AirQualityGUI
 {
     public partial class HotMapReport : Form
     {
+        private AirQuality airQuality;
         private GeoMap heatMap;
 
         public HotMapReport()
@@ -23,6 +24,11 @@ namespace AirQualityGUI
             this.heatMap = new GeoMap();
 
             PrintHeatMap();
+        }
+
+        public void InitAirQuality(AirQuality airQuality)
+        {
+            this.airQuality = airQuality;
         }
 
         private void PrintHeatMap()

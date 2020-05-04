@@ -1,4 +1,5 @@
-﻿using System;
+﻿using model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,15 @@ namespace AirQualityGUI
 {
     public partial class LevelConcentrationReport : Form
     {
+        private AirQuality AirQuality;
         public LevelConcentrationReport()
         {
             InitializeComponent();
+        }
+
+        public void InitAirQuality(AirQuality airQuality)
+        {
+            this.airQuality = airQuality;
         }
     }
 }

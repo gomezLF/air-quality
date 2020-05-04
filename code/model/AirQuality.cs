@@ -71,7 +71,6 @@ namespace model
         public List<Medition> Meditions { get => meditions; set => meditions = value; }
 
 
-
     }
         
 
