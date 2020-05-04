@@ -43,6 +43,9 @@ namespace model
         }
 
 
+    
+
+
         // Getters and Setters
 
         public string URL { get => url; set => url = value; }
