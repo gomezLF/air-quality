@@ -21,15 +21,29 @@ namespace AirQualityGUI
         {
             InitializeComponent();
 
-            this.heatMap = new GeoMap();
+            airQuality = new AirQuality();
+            airQuality.GetInformation();
+            AddDepartments();
 
+            this.heatMap = new GeoMap();
             PrintHeatMap();
         }
 
-        public void InitAirQuality(AirQuality airQuality)
+        private void AddDepartments() 
         {
-            this.airQuality = airQuality;
+            cbDepartments.Items.Add("Seleccione un departamento");
+            cbDepartments.SelectedIndex = 0;
+
+            foreach (Medition medition in airQuality.Meditions) {
+                String depart = medition.departamento;
+                Console.WriteLine(depart);
+                if (!cbDepartments.Items.Equals(depart)) {
+                    cbDepartments.Items.Add(depart);
+                }
+            }
+           
         }
+
 
         private void PrintHeatMap()
         {

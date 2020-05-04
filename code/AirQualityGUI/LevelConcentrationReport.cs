@@ -17,11 +17,9 @@ namespace AirQualityGUI
         public LevelConcentrationReport()
         {
             InitializeComponent();
+            AirQuality = new AirQuality();
         }
 
-        public void InitAirQuality(AirQuality airQuality)
-        {
-            this.airQuality = airQuality;
-        }
+       
     }
 }

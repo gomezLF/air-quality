@@ -44,6 +44,11 @@
             this.btRestore = new System.Windows.Forms.PictureBox();
             this.btMaximize = new System.Windows.Forms.PictureBox();
             this.btClose = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panelContenedor.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelBarraTutulo.SuspendLayout();
@@ -80,8 +85,13 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.Black;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.panelMenu.Controls.Add(this.panel2);
+            this.panelMenu.Controls.Add(this.panel3);
+            this.panelMenu.Controls.Add(this.panel4);
+            this.panelMenu.Controls.Add(this.panel5);
             this.panelMenu.Controls.Add(this.lbReports);
+            this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Controls.Add(this.btMonitoryStationReport);
             this.panelMenu.Controls.Add(this.btLevelConcentrationReport);
             this.panelMenu.Controls.Add(this.btStudyPlaceReport);
@@ -106,74 +116,103 @@
             // 
             // btMonitoryStationReport
             // 
-            this.btMonitoryStationReport.AutoSize = true;
-            this.btMonitoryStationReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btMonitoryStationReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btMonitoryStationReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btMonitoryStationReport.FlatAppearance.BorderSize = 0;
+            this.btMonitoryStationReport.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btMonitoryStationReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btMonitoryStationReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btMonitoryStationReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btMonitoryStationReport.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMonitoryStationReport.ForeColor = System.Drawing.Color.White;
             this.btMonitoryStationReport.Image = ((System.Drawing.Image)(resources.GetObject("btMonitoryStationReport.Image")));
             this.btMonitoryStationReport.Location = new System.Drawing.Point(3, 370);
             this.btMonitoryStationReport.Name = "btMonitoryStationReport";
-            this.btMonitoryStationReport.Size = new System.Drawing.Size(145, 56);
+            this.btMonitoryStationReport.Size = new System.Drawing.Size(153, 57);
             this.btMonitoryStationReport.TabIndex = 4;
-            this.btMonitoryStationReport.Text = "E. monitoreo";
+            this.btMonitoryStationReport.Text = "Estaciones de Monitoreo";
             this.btMonitoryStationReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btMonitoryStationReport.UseVisualStyleBackColor = false;
             this.btMonitoryStationReport.Click += new System.EventHandler(this.btMonitoryStationReport_Click);
             // 
             // btLevelConcentrationReport
             // 
-            this.btLevelConcentrationReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btLevelConcentrationReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btLevelConcentrationReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btLevelConcentrationReport.FlatAppearance.BorderSize = 0;
+            this.btLevelConcentrationReport.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btLevelConcentrationReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btLevelConcentrationReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btLevelConcentrationReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLevelConcentrationReport.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLevelConcentrationReport.ForeColor = System.Drawing.Color.White;
             this.btLevelConcentrationReport.Image = ((System.Drawing.Image)(resources.GetObject("btLevelConcentrationReport.Image")));
             this.btLevelConcentrationReport.Location = new System.Drawing.Point(3, 307);
             this.btLevelConcentrationReport.Name = "btLevelConcentrationReport";
-            this.btLevelConcentrationReport.Size = new System.Drawing.Size(145, 57);
+            this.btLevelConcentrationReport.Size = new System.Drawing.Size(153, 57);
             this.btLevelConcentrationReport.TabIndex = 3;
-            this.btLevelConcentrationReport.Text = "N. Concent";
+            this.btLevelConcentrationReport.Text = "Niveles Concentración";
             this.btLevelConcentrationReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btLevelConcentrationReport.UseVisualStyleBackColor = false;
             this.btLevelConcentrationReport.Click += new System.EventHandler(this.btLevelConcentrationReport_Click);
             // 
             // btStudyPlaceReport
             // 
-            this.btStudyPlaceReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btStudyPlaceReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btStudyPlaceReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btStudyPlaceReport.FlatAppearance.BorderSize = 0;
+            this.btStudyPlaceReport.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btStudyPlaceReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btStudyPlaceReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btStudyPlaceReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btStudyPlaceReport.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btStudyPlaceReport.ForeColor = System.Drawing.Color.White;
             this.btStudyPlaceReport.Image = ((System.Drawing.Image)(resources.GetObject("btStudyPlaceReport.Image")));
             this.btStudyPlaceReport.Location = new System.Drawing.Point(3, 242);
             this.btStudyPlaceReport.Name = "btStudyPlaceReport";
-            this.btStudyPlaceReport.Size = new System.Drawing.Size(144, 59);
+            this.btStudyPlaceReport.Size = new System.Drawing.Size(153, 57);
             this.btStudyPlaceReport.TabIndex = 2;
-            this.btStudyPlaceReport.Text = "L.Estudiado";
+            this.btStudyPlaceReport.Text = "Lugares Estudiados";
             this.btStudyPlaceReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btStudyPlaceReport.UseVisualStyleBackColor = false;
             this.btStudyPlaceReport.Click += new System.EventHandler(this.btStudyPlaceReport_Click);
             // 
             // btHotMapReport
             // 
-            this.btHotMapReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btHotMapReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btHotMapReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btHotMapReport.FlatAppearance.BorderSize = 0;
+            this.btHotMapReport.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btHotMapReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btHotMapReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btHotMapReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btHotMapReport.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btHotMapReport.ForeColor = System.Drawing.Color.White;
             this.btHotMapReport.Image = ((System.Drawing.Image)(resources.GetObject("btHotMapReport.Image")));
             this.btHotMapReport.Location = new System.Drawing.Point(3, 179);
             this.btHotMapReport.Name = "btHotMapReport";
-            this.btHotMapReport.Size = new System.Drawing.Size(145, 57);
+            this.btHotMapReport.Size = new System.Drawing.Size(153, 57);
             this.btHotMapReport.TabIndex = 1;
-            this.btHotMapReport.Text = "Mapa Calor";
+            this.btHotMapReport.Text = "Mapa de Calor";
             this.btHotMapReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btHotMapReport.UseVisualStyleBackColor = false;
             this.btHotMapReport.Click += new System.EventHandler(this.btHotMapReport_Click);
             // 
             // btMainReport
             // 
-            this.btMainReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btMainReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btMainReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btMainReport.FlatAppearance.BorderSize = 0;
+            this.btMainReport.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btMainReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btMainReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btMainReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btMainReport.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMainReport.ForeColor = System.Drawing.Color.White;
             this.btMainReport.Image = ((System.Drawing.Image)(resources.GetObject("btMainReport.Image")));
-            this.btMainReport.Location = new System.Drawing.Point(3, 114);
+            this.btMainReport.Location = new System.Drawing.Point(3, 116);
             this.btMainReport.Name = "btMainReport";
-            this.btMainReport.Size = new System.Drawing.Size(144, 59);
+            this.btMainReport.Size = new System.Drawing.Size(153, 57);
             this.btMainReport.TabIndex = 0;
             this.btMainReport.Text = "Filtrado";
             this.btMainReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -182,7 +221,7 @@
             // 
             // panelBarraTutulo
             // 
-            this.panelBarraTutulo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panelBarraTutulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(10)))), ((int)(((byte)(39)))));
             this.panelBarraTutulo.Controls.Add(this.label1);
             this.panelBarraTutulo.Controls.Add(this.btMinimize);
             this.panelBarraTutulo.Controls.Add(this.btRestore);
@@ -261,6 +300,46 @@
             this.btClose.TabStop = false;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.panel1.Location = new System.Drawing.Point(3, 116);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 57);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.panel2.Location = new System.Drawing.Point(3, 370);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 57);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.panel3.Location = new System.Drawing.Point(3, 307);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(5, 57);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.panel4.Location = new System.Drawing.Point(3, 244);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(5, 57);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.panel5.Location = new System.Drawing.Point(3, 179);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 57);
+            this.panel5.TabIndex = 1;
+            // 
             // FormInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,6 +383,11 @@
         private System.Windows.Forms.Button btMainReport;
         private System.Windows.Forms.Label lbReports;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 

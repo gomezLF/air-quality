@@ -132,8 +132,6 @@
             // cbDepartments
             // 
             this.cbDepartments.FormattingEnabled = true;
-            this.cbDepartments.Items.AddRange(new object[] {
-            "Seleccione un Departamento"});
             this.cbDepartments.Location = new System.Drawing.Point(62, 13);
             this.cbDepartments.Name = "cbDepartments";
             this.cbDepartments.Size = new System.Drawing.Size(204, 21);

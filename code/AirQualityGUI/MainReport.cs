@@ -24,11 +24,7 @@ namespace AirQualityGUI
         public MainReport()
         {
             InitializeComponent();
-           // airQuality = new AirQuality();
-        }
-
-        public void InitAirQuality(AirQuality airQuality) {
-            this.airQuality = airQuality;
+            airQuality = new AirQuality();
         }
 
         // Agre los componentes de los combobox a sus respectivos.
