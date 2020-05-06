@@ -32,7 +32,12 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelFondoForms = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.lbReports = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btMonitoryStationReport = new System.Windows.Forms.Button();
             this.btLevelConcentrationReport = new System.Windows.Forms.Button();
             this.btStudyPlaceReport = new System.Windows.Forms.Button();
@@ -44,11 +49,6 @@
             this.btRestore = new System.Windows.Forms.PictureBox();
             this.btMaximize = new System.Windows.Forms.PictureBox();
             this.btClose = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panelContenedor.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelBarraTutulo.SuspendLayout();
@@ -69,7 +69,6 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1235, 652);
             this.panelContenedor.TabIndex = 0;
-            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
             // panelFondoForms
             // 
@@ -81,7 +80,6 @@
             this.panelFondoForms.Name = "panelFondoForms";
             this.panelFondoForms.Size = new System.Drawing.Size(1082, 624);
             this.panelFondoForms.TabIndex = 2;
-            this.panelFondoForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFondoForms_Paint);
             // 
             // panelMenu
             // 
@@ -103,6 +101,38 @@
             this.panelMenu.Size = new System.Drawing.Size(153, 624);
             this.panelMenu.TabIndex = 1;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.panel2.Location = new System.Drawing.Point(3, 370);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 57);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.panel3.Location = new System.Drawing.Point(3, 307);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(5, 57);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.panel4.Location = new System.Drawing.Point(3, 244);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(5, 57);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.panel5.Location = new System.Drawing.Point(3, 179);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 57);
+            this.panel5.TabIndex = 1;
+            // 
             // lbReports
             // 
             this.lbReports.AutoSize = true;
@@ -113,6 +143,14 @@
             this.lbReports.Size = new System.Drawing.Size(90, 28);
             this.lbReports.TabIndex = 5;
             this.lbReports.Text = "Repotes";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.panel1.Location = new System.Drawing.Point(3, 116);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 57);
+            this.panel1.TabIndex = 0;
             // 
             // btMonitoryStationReport
             // 
@@ -133,7 +171,7 @@
             this.btMonitoryStationReport.Text = "Estaciones de Monitoreo";
             this.btMonitoryStationReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btMonitoryStationReport.UseVisualStyleBackColor = false;
-            this.btMonitoryStationReport.Click += new System.EventHandler(this.btMonitoryStationReport_Click);
+            this.btMonitoryStationReport.Click += new System.EventHandler(this.MonitoryStationReport_Click);
             // 
             // btLevelConcentrationReport
             // 
@@ -154,7 +192,7 @@
             this.btLevelConcentrationReport.Text = "Niveles Concentración";
             this.btLevelConcentrationReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btLevelConcentrationReport.UseVisualStyleBackColor = false;
-            this.btLevelConcentrationReport.Click += new System.EventHandler(this.btLevelConcentrationReport_Click);
+            this.btLevelConcentrationReport.Click += new System.EventHandler(this.LevelConcentrationReport_Click);
             // 
             // btStudyPlaceReport
             // 
@@ -175,7 +213,7 @@
             this.btStudyPlaceReport.Text = "Lugares Estudiados";
             this.btStudyPlaceReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btStudyPlaceReport.UseVisualStyleBackColor = false;
-            this.btStudyPlaceReport.Click += new System.EventHandler(this.btStudyPlaceReport_Click);
+            this.btStudyPlaceReport.Click += new System.EventHandler(this.StudyPlaceReport_Click);
             // 
             // btHotMapReport
             // 
@@ -196,7 +234,7 @@
             this.btHotMapReport.Text = "Mapa de Calor";
             this.btHotMapReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btHotMapReport.UseVisualStyleBackColor = false;
-            this.btHotMapReport.Click += new System.EventHandler(this.btHotMapReport_Click);
+            this.btHotMapReport.Click += new System.EventHandler(this.HeatMapReport_Click);
             // 
             // btMainReport
             // 
@@ -217,7 +255,7 @@
             this.btMainReport.Text = "Filtrado";
             this.btMainReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btMainReport.UseVisualStyleBackColor = false;
-            this.btMainReport.Click += new System.EventHandler(this.btMainReport_Click);
+            this.btMainReport.Click += new System.EventHandler(this.MainReport_Click);
             // 
             // panelBarraTutulo
             // 
@@ -299,46 +337,6 @@
             this.btClose.TabIndex = 0;
             this.btClose.TabStop = false;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.panel1.Location = new System.Drawing.Point(3, 116);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 57);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.panel2.Location = new System.Drawing.Point(3, 370);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 57);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.panel3.Location = new System.Drawing.Point(3, 307);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 57);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.panel4.Location = new System.Drawing.Point(3, 244);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 57);
-            this.panel4.TabIndex = 1;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.panel5.Location = new System.Drawing.Point(3, 179);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(5, 57);
-            this.panel5.TabIndex = 1;
             // 
             // FormInicial
             // 

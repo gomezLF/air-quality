@@ -14,17 +14,16 @@ namespace AirQualityGUI
         private AirQuality airQuality;
 
         private Boolean boxChecked = false;
-
         private DataGridView totalData;
         private int totalRows;
         private int currentPage;
         private int maxPages;
         private int rowsPerPage;
 
-        public MainReport()
+        public MainReport(AirQuality airQuality)
         {
             InitializeComponent();
-            airQuality = new AirQuality();
+            this.airQuality = airQuality;
         }
 
         // Agre los componentes de los combobox a sus respectivos.

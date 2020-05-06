@@ -17,11 +17,11 @@ namespace AirQualityGUI
         private AirQuality airQuality;
         private GeoMap heatMap;
 
-        public HotMapReport()
+        public HotMapReport(AirQuality airQuality)
         {
             InitializeComponent();
 
-            airQuality = new AirQuality();
+            this.airQuality = airQuality;
             airQuality.GetInformation();
             AddDepartments();
 

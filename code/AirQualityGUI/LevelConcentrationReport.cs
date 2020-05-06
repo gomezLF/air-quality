@@ -13,11 +13,11 @@ namespace AirQualityGUI
 {
     public partial class LevelConcentrationReport : Form
     {
-        private AirQuality AirQuality;
-        public LevelConcentrationReport()
+        private AirQuality airQuality;
+        public LevelConcentrationReport(AirQuality airQuality)
         {
             InitializeComponent();
-            AirQuality = new AirQuality();
+            this.airQuality = airQuality;
         }
 
        

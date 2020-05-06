@@ -1,23 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using model;
 
@@ -25,7 +8,20 @@ namespace AirQualityGUI
 {
     public partial class FormInicial : Form
     {
+        private const int MAIN_REPORT = 1;
+        private const int HOTMAP = 2;
+        private const int MONITORY_STATION = 3;
+        private const int LEVEL_CONCENTRATION = 4;
+        private const int STUDY_PLACE = 5;
+
         private AirQuality airQuality;
+
+        private MainReport mainReport;
+        private HotMapReport heatMap;
+        private MonitoryStationReport monitoryStation;
+        private LevelConcentrationReport levelConcentration;
+        private StudyPlaceReport studyPlace;
+
         public FormInicial()
         {
             InitializeComponent();
@@ -33,11 +29,6 @@ namespace AirQualityGUI
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
             airQuality = new AirQuality();
-        }
-
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
 
@@ -138,84 +129,93 @@ namespace AirQualityGUI
         #region Manejo Reportes
 
         // Abrir Los reportes
-
-        public Form OpenReport<MyReport>() where MyReport : Form, new()
+        private void OpenReport(Form currentReport)
         {
-            Form currentReport;
-            currentReport = panelFondoForms.Controls.OfType<MyReport>().FirstOrDefault();//Busca en la colecion el formulario
-                                                                                         //si el formulario/instancia no existe
-            if (currentReport == null)
-            {
-                currentReport = new MyReport();
-                currentReport.TopLevel = false;
-                currentReport.FormBorderStyle = FormBorderStyle.None;
-                currentReport.Dock = DockStyle.Fill;
-                panelFondoForms.Controls.Add(currentReport);
-                panelFondoForms.Tag = currentReport;
-                currentReport.Show();
-                currentReport.BringToFront();
-            }
-            //si el reporte/ existe
-            else
-            {
-                currentReport.BringToFront();
-            }
+            panelFondoForms.Controls.Clear();
 
-            return currentReport;
-        }
-
-
-        /**
-        private Form OpenReports(object reportForm)
-        {
-            if (this.panelFondoForms.Controls.Count > 0)
-                this.panelFondoForms.Controls.RemoveAt(0);
-            Form currentReport = reportForm as Form;
             currentReport.TopLevel = false;
+            currentReport.FormBorderStyle = FormBorderStyle.None;
             currentReport.Dock = DockStyle.Fill;
-            this.panelFondoForms.Controls.Add(currentReport);
-            this.panelFondoForms.Tag = currentReport;
+
+            panelFondoForms.Controls.Add(currentReport);
+            panelFondoForms.Tag = currentReport;
+
             currentReport.Show();
-            return currentReport;
-        }
-        */
-
-
-        private void btMainReport_Click(object sender, EventArgs e)
-        {
-            Form cForm = OpenReport<MainReport>();
-
-
+            currentReport.BringToFront();
         }
 
-        private void btHotMapReport_Click(object sender, EventArgs e)
+        private void ReportButtonControl(int report)
         {
-            Form cForm = OpenReport<HotMapReport>();
+            this.btMainReport.Enabled = true;
+            this.btHotMapReport.Enabled = true;
+            this.btMonitoryStationReport.Enabled = true;
+            this.btLevelConcentrationReport.Enabled = true;
+            this.btStudyPlaceReport.Enabled = true;
 
-
+            switch (report)
+            {
+                case MAIN_REPORT:
+                    this.btMainReport.Enabled = false;
+                    break;
+                case HOTMAP:
+                    this.btHotMapReport.Enabled = false;
+                    break;
+                case MONITORY_STATION:
+                    this.btMonitoryStationReport.Enabled = false;
+                    break;
+                case LEVEL_CONCENTRATION:
+                    this.btLevelConcentrationReport.Enabled = false;
+                    break;
+                case STUDY_PLACE:
+                    this.btStudyPlaceReport.Enabled = false;
+                    break;
+            }
         }
 
-        private void btStudyPlaceReport_Click(object sender, EventArgs e)
-        {
-            Form cForm = OpenReport<StudyPlaceReport>();
 
+        private void MainReport_Click(object sender, EventArgs e)
+        {
+            if (this.mainReport == null)
+                this.mainReport = new MainReport(this.airQuality);
+
+            OpenReport(this.mainReport);
+            ReportButtonControl(MAIN_REPORT);
         }
 
-        private void panelFondoForms_Paint(object sender, PaintEventArgs e)
+        private void StudyPlaceReport_Click(object sender, EventArgs e)
         {
+            if (this.studyPlace == null)
+                this.studyPlace = new StudyPlaceReport(this.airQuality);
 
+            OpenReport(this.studyPlace);
+            ReportButtonControl(STUDY_PLACE);
         }
 
-        private void btLevelConcentrationReport_Click(object sender, EventArgs e)
+        private void HeatMapReport_Click(object sender, EventArgs e)
         {
-            Form cForm = OpenReport<LevelConcentrationReport>();
+            if (this.heatMap == null)
+                this.heatMap = new HotMapReport(this.airQuality);
 
+            OpenReport(this.heatMap);
+            ReportButtonControl(HOTMAP);
         }
 
-        private void btMonitoryStationReport_Click(object sender, EventArgs e)
+        private void MonitoryStationReport_Click(object sender, EventArgs e)
         {
-            Form cForm = OpenReport<MonitoryStationReport>();
+            if (this.monitoryStation == null)
+                this.monitoryStation = new MonitoryStationReport(this.airQuality);
 
+            OpenReport(this.monitoryStation);
+            ReportButtonControl(MONITORY_STATION);
+        }
+
+        private void LevelConcentrationReport_Click(object sender, EventArgs e)
+        {
+            if (this.levelConcentration == null)
+                this.levelConcentration = new LevelConcentrationReport(this.airQuality);
+
+            OpenReport(this.levelConcentration);
+            ReportButtonControl(LEVEL_CONCENTRATION);
         }
         #endregion
 

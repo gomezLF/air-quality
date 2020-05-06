@@ -16,10 +16,10 @@ namespace AirQualityGUI
 
         private AirQuality airQuality;
 
-        public StudyPlaceReport()
+        public StudyPlaceReport(AirQuality airQuality)
         {
             InitializeComponent();
-            airQuality = new AirQuality();
+            this.airQuality = airQuality;
         }
 
        
