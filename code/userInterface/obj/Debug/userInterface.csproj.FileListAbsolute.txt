@@ -27,33 +27,3 @@ C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userIn
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.csproj.CopyComplete
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.exe
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.pdb
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\Colombia.xml
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\userInterface.exe.config
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\userInterface.exe
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\userInterface.pdb
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\LiveCharts.dll
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\LiveCharts.WinForms.dll
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\LiveCharts.Wpf.dll
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\model.dll
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\Newtonsoft.Json.dll
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\model.pdb
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\LiveCharts.pdb
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\LiveCharts.xml
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\LiveCharts.WinForms.pdb
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\LiveCharts.WinForms.xml
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\LiveCharts.Wpf.pdb
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\LiveCharts.Wpf.xml
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\Newtonsoft.Json.xml
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.csprojAssemblyReference.cache
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.FormInicial.resources
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.HotMapReport.resources
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.LevelConcentrationReport.resources
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.MainReport.resources
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.MonitoryStationReport.resources
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.Properties.Resources.resources
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.StudyPlaceReport.resources
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.csproj.GenerateResource.cache
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.csproj.CoreCompileInputs.cache
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.csproj.CopyComplete
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.exe
-E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\obj\Debug\userInterface.pdb

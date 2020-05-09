@@ -32,7 +32,6 @@ namespace model
             resultResponse = "";
             meditions = new List<Medition>();
 
-          
         }
 
 
