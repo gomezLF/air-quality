@@ -356,7 +356,7 @@ namespace userInterface
                 case "Nombre de la Estación":
                     comboBox.Items.AddRange(databaseAdministrator.stationName.ToArray());
                     break;
-                case "Tecnologia":
+                case "Tecnología":
                     comboBox.Items.AddRange(databaseAdministrator.technology.ToArray());
                     break;
                 case "Departamento":
@@ -365,7 +365,7 @@ namespace userInterface
                 case "Nombre del Municipio":
                     comboBox.Items.AddRange(databaseAdministrator.municipality.ToArray());
                     break;
-                case "Tipo de Estacion":
+                case "Tipo de Estación":
                     comboBox.Items.AddRange(databaseAdministrator.stationType.ToArray());
                     break;
                 case "Variable":
