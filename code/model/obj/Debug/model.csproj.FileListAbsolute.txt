@@ -16,3 +16,12 @@ C:\Users\Windows 10\source\repos\air-quality\code\model\bin\Debug\Newtonsoft.Jso
 C:\Users\Windows 10\source\repos\air-quality\code\model\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Windows 10\source\repos\air-quality\code\model\obj\Debug\model.csproj.CopyComplete
 C:\Users\Windows 10\source\repos\air-quality\code\model\obj\Debug\model.csprojAssemblyReference.cache
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\model\bin\Debug\model.dll
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\model\bin\Debug\model.pdb
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\model\obj\Debug\model.csprojAssemblyReference.cache
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\model\obj\Debug\model.csproj.CoreCompileInputs.cache
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\model\obj\Debug\model.csproj.CopyComplete
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\model\obj\Debug\model.dll
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\model\obj\Debug\model.pdb

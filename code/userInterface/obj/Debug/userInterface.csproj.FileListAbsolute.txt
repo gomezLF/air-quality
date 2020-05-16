@@ -28,3 +28,33 @@ C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userIn
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.HeatMapReport.resources
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.FilterTableReport.resources
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.MainMenu.resources
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\Colombia.xml
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\userInterface.exe.config
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\userInterface.exe
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\userInterface.pdb
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\LiveCharts.dll
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\model.dll
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\model.pdb
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\LiveCharts.pdb
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\LiveCharts.xml
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.csprojAssemblyReference.cache
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.FilterTableReport.resources
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.HeatMapReport.resources
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.LevelConcentrationReport.resources
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.MainMenu.resources
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.MonitoryStationReport.resources
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.Properties.Resources.resources
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.StudyPlaceReport.resources
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.csproj.GenerateResource.cache
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.csproj.CoreCompileInputs.cache
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.csproj.CopyComplete
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.exe
+C:\Users\mateo\OneDrive\Escritorio\air-quality\code\userInterface\obj\Debug\userInterface.pdb
