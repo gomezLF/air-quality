@@ -1,6 +1,6 @@
 ﻿namespace userInterface
 {
-    partial class HotMapReport
+    partial class HeatMapReport
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HotMapReport));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeatMapReport));
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbShowDateProyection = new System.Windows.Forms.RadioButton();
             this.rbShowDateHistorical = new System.Windows.Forms.RadioButton();

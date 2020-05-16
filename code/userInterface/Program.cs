@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace userInterface
@@ -16,7 +13,25 @@ namespace userInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormInicial());
+
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.FormClosed += MainMenu_Closed; // agrega esto aquí
+            mainMenu.Show();
+            Application.Run();
+        }
+
+        private static void MainMenu_Closed(object sender, FormClosedEventArgs e)
+        {
+            ((Form)sender).FormClosed -= MainMenu_Closed;
+
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.ExitThread();
+            }
+            else
+            {
+                Application.OpenForms[0].FormClosed += MainMenu_Closed;
+            }
         }
     }
 }

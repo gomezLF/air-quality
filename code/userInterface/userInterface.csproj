@@ -49,6 +49,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,17 +64,17 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AirQualityGUI.cs">
+    <Compile Include="FilterTableReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AirQualityGUI.Designer.cs">
-      <DependentUpon>AirQualityGUI.cs</DependentUpon>
+    <Compile Include="FilterTableReport.Designer.cs">
+      <DependentUpon>FilterTableReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="HotMapReport.cs">
+    <Compile Include="HeatMapReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HotMapReport.Designer.cs">
-      <DependentUpon>HotMapReport.cs</DependentUpon>
+    <Compile Include="HeatMapReport.Designer.cs">
+      <DependentUpon>HeatMapReport.cs</DependentUpon>
     </Compile>
     <Compile Include="LevelConcentrationReport.cs">
       <SubType>Form</SubType>
@@ -81,11 +82,11 @@
     <Compile Include="LevelConcentrationReport.Designer.cs">
       <DependentUpon>LevelConcentrationReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainReport.cs">
+    <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainReport.Designer.cs">
-      <DependentUpon>MainReport.cs</DependentUpon>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="MonitoryStationReport.cs">
       <SubType>Form</SubType>
@@ -101,17 +102,17 @@
     <Compile Include="StudyPlaceReport.Designer.cs">
       <DependentUpon>StudyPlaceReport.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AirQualityGUI.resx">
-      <DependentUpon>AirQualityGUI.cs</DependentUpon>
+    <EmbeddedResource Include="FilterTableReport.resx">
+      <DependentUpon>FilterTableReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HotMapReport.resx">
-      <DependentUpon>HotMapReport.cs</DependentUpon>
+    <EmbeddedResource Include="HeatMapReport.resx">
+      <DependentUpon>HeatMapReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LevelConcentrationReport.resx">
       <DependentUpon>LevelConcentrationReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainReport.resx">
-      <DependentUpon>MainReport.cs</DependentUpon>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MonitoryStationReport.resx">
       <DependentUpon>MonitoryStationReport.cs</DependentUpon>
@@ -124,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="StudyPlaceReport.resx">
       <DependentUpon>StudyPlaceReport.cs</DependentUpon>
@@ -152,6 +154,21 @@
     <None Include="Colombia.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\column-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data-table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pointing.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

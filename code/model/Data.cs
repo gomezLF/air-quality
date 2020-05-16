@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace model
 {
-    // Clase contenedora de los datos recibidos del dataset
-    public class Medition
+    public class Data
     {
         public string fecha { get; set; }
         public string autoridad_ambiental { get; set; }
@@ -24,6 +23,5 @@ namespace model
         public string variable { get; set; }
         public string unidades { get; set; }
         public Double concentraci_n { get; set; }
-
     }
 }

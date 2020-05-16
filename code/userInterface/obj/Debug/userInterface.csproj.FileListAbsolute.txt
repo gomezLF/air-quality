@@ -15,10 +15,7 @@ C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\LiveCh
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.FormInicial.resources
-C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.HotMapReport.resources
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.LevelConcentrationReport.resources
-C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.MainReport.resources
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.MonitoryStationReport.resources
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.Properties.Resources.resources
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.StudyPlaceReport.resources
@@ -27,3 +24,7 @@ C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userIn
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.csproj.CopyComplete
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.exe
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.pdb
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.csprojAssemblyReference.cache
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.HeatMapReport.resources
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.FilterTableReport.resources
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\obj\Debug\userInterface.MainMenu.resources

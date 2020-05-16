@@ -1,23 +1,15 @@
 ﻿using model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace userInterface
 {
     public partial class LevelConcentrationReport : Form
     {
-        private AirQuality airQuality;
-        public LevelConcentrationReport(AirQuality airQuality)
+        private DatabaseAdministrator databaseAdministrator;
+        public LevelConcentrationReport(DatabaseAdministrator databaseAdministrator)
         {
             InitializeComponent();
-            this.airQuality = airQuality;
+            this.databaseAdministrator = databaseAdministrator;
         }
 
        

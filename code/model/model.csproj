@@ -44,9 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Medition.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="DatabaseAdministrator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AirQuality.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

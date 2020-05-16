@@ -15,3 +15,4 @@ E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\a
 C:\Users\Windows 10\source\repos\air-quality\code\model\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Windows 10\source\repos\air-quality\code\model\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Windows 10\source\repos\air-quality\code\model\obj\Debug\model.csproj.CopyComplete
+C:\Users\Windows 10\source\repos\air-quality\code\model\obj\Debug\model.csprojAssemblyReference.cache

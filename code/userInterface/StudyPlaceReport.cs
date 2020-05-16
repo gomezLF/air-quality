@@ -1,12 +1,4 @@
 ﻿using model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace userInterface
@@ -14,12 +6,12 @@ namespace userInterface
     public partial class StudyPlaceReport : Form
     {
 
-        private AirQuality airQuality;
+        private DatabaseAdministrator databaseAdministrator;
 
-        public StudyPlaceReport(AirQuality airQuality)
+        public StudyPlaceReport(DatabaseAdministrator databaseAdministrator)
         {
             InitializeComponent();
-            this.airQuality = airQuality;
+            this.databaseAdministrator = databaseAdministrator;
         }
 
        

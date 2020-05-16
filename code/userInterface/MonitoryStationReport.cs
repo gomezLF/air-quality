@@ -13,11 +13,11 @@ namespace userInterface
 {
     public partial class MonitoryStationReport : Form
     {
-        private AirQuality airQuality;
-        public MonitoryStationReport(AirQuality airQuality)
+        private DatabaseAdministrator databaseAdministrator;
+        public MonitoryStationReport(DatabaseAdministrator databaseAdministrator)
         {
             InitializeComponent();
-            this.airQuality = airQuality;
+            this.databaseAdministrator = databaseAdministrator;
         }
 
         
