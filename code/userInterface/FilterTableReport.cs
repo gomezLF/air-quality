@@ -8,6 +8,7 @@ using model;
 
 namespace userInterface
 {
+
     public partial class FilterTableReport : Form
     {
 
@@ -29,6 +30,14 @@ namespace userInterface
             this.pageNumber = 0;
 
             this.databaseAdministrator = databaseAdministrator;
+        }
+
+        private void btReturnMainMenu_Click(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.DatabaseAdministrator = this.databaseAdministrator;
+            mainMenu.Show();
+            this.Close();
         }
 
         private String FilterOptionsManager(String filter)
@@ -96,7 +105,6 @@ namespace userInterface
                 NextButtonManager(false);
             }
         }
-
         #endregion
 
 
@@ -483,8 +491,9 @@ namespace userInterface
             return URL;
         }
 
+
         #endregion
 
-        
+      
     }
 }
