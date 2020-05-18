@@ -66,3 +66,9 @@ Esta entrega consiste en el refinamiento de las entregas anteriores, diagrama de
 [Reportes implementados en Visual Studio](https://github.com/gomezLF/air-quality/tree/develop/code)
 
 #### 3. Vídeo
+
+---
+
+### Entrega final
+
+Para la última entrega los entregables son refinamiento de las entregas anterioires y un algortimo de análiisis de la información
