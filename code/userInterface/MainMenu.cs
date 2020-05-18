@@ -6,9 +6,8 @@ namespace userInterface
 {
     public partial class MainMenu : Form
     {
-        private DatabaseAdministrator DatabaseAdministrator;
+        public DatabaseAdministrator DatabaseAdministrator;
 
-        private FilterTableReport FilterTableReport;
 
 
         public MainMenu()
@@ -19,15 +18,14 @@ namespace userInterface
 
         private void DataFilter_button_Click(object sender, EventArgs e)
         {
-            if (this.FilterTableReport == null)
-                this.FilterTableReport = new FilterTableReport(DatabaseAdministrator);
-
-            OpenReport(this.FilterTableReport);
+            FilterTableReport filterTable = new FilterTableReport(DatabaseAdministrator);
+            OpenReport(filterTable);
         }
 
         private void HeatMap_button_Click(object sender, EventArgs e)
         {
-
+            HeatMapReport heatMap = new HeatMapReport(DatabaseAdministrator);
+            OpenReport(heatMap);
         }
 
         private void StudyPlace_button_Click(object sender, EventArgs e)
