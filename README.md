@@ -52,15 +52,17 @@ Enlace archivo word descripcción [algoritmo página 8](https://github.com/gomez
 
 Enlace [vídeo](https://github.com/gomezLF/air-quality/blob/develop/docs/delivery-2/Entrega%202.mp4)
 
+---
+
 ### Tercaera entrega
 
 Esta entrega consiste en el refinamiento de las entregas anteriores, diagrama de secuencia de las 3 operaciones básicas de la aplicación, implementación de reportes y el vídeo explicativo
 
 #### 1. Refinamiento y diagrama de secuencia
 
-[Refinamiento del método de la ingeniería, y diagrama de secuencia] (https://github.com/gomezLF/air-quality/tree/develop/docs/delivery-3)
+[Refinamiento, y diagrama de secuencia](https://github.com/gomezLF/air-quality/tree/develop/docs/delivery-3)
 
 #### 2. Reportes
-[Reportes implementados en Visual Studio] https://github.com/gomezLF/air-quality/tree/develop/code
+[Reportes implementados en Visual Studio](https://github.com/gomezLF/air-quality/tree/develop/code)
 
 #### 3. Vídeo
