@@ -29,7 +29,6 @@ namespace userInterface
         private void LevelConcentrationReport_Load(object sender, System.EventArgs e)
         {
             loadCBDepartments();
-
         }
 
         public void loadCBDepartments()
@@ -52,34 +51,33 @@ namespace userInterface
 
         private void btShowPieChart_Click(object sender, EventArgs e)
         {
-
-            Func<ChartPoint, string> labelPoint = chartPoint =>
-                string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
-
-            var collection = new SeriesCollection();
-
-            foreach (string variable in this.databaseAdministrator.variable)
+            if (cbDepartments.SelectedItem != null)
             {
-                customUrl = DatabaseAdministrator.URL;
-                customUrl += "?departamento="+cbDepartments.SelectedItem+ "&variable="+variable+"&$select=avg(concentraci_n)";
-                listData = this.databaseAdministrator.Getinformation(customUrl);
+                pieChart1.Titles.Add($"Niveles de Concentración en {cbDepartments.SelectedItem}");
+                pieChart1.Series["s1"].IsValueShownAsLabel = true;
 
-                Console.WriteLine("Se cargaron los datossssss");
-                
-                collection.Add(new PieSeries
+                foreach (var variable in this.databaseAdministrator.variable)
                 {
-                    Title = variable,
-                    Values = new ChartValues<double> { (double) 5 },
-                    DataLabels = true
+                    String url = DatabaseAdministrator.URL + $"?departamento={cbDepartments.SelectedItem}&variable={variable}&$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                    PieValues(this.databaseAdministrator.ConsultData(url));
 
-                });
+                    pieChart1.Series["s1"].Points.AddXY(variable, "100");
+                }
+
+            }else
+            {
+                MessageBox.Show("Para generar el grafico debe de llenar los campos requeridos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-            pieChart1.Series = collection;
-            pieChart1.LegendLocation = LegendLocation.Bottom;
         }
 
+        private String PieValues(String value)
+        {
+            String pieValue = "";
+            
+            Console.WriteLine(value);
 
+            return pieValue;
+        }
 
     }
 }   

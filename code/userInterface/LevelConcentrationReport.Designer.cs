@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelConcentrationReport));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btShowPieChart = new System.Windows.Forms.Button();
             this.cbDepartments = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btReturnMainMenu = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pieChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pieChart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,14 +53,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(732, 427);
             this.panel1.TabIndex = 0;
-            // 
-            // pieChart1
-            // 
-            this.pieChart1.Location = new System.Drawing.Point(-11, 2);
-            this.pieChart1.Name = "pieChart1";
-            this.pieChart1.Size = new System.Drawing.Size(740, 422);
-            this.pieChart1.TabIndex = 0;
-            this.pieChart1.Text = "pieChart1";
             // 
             // panel2
             // 
@@ -72,6 +67,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(210, 250);
             this.panel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(189, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Seleccione un departamento";
             // 
             // btShowPieChart
             // 
@@ -114,15 +119,22 @@
             this.btReturnMainMenu.UseVisualStyleBackColor = false;
             this.btReturnMainMenu.Click += new System.EventHandler(this.btReturnMainMenu_Click);
             // 
-            // label2
+            // pieChart1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Seleccione un departamento";
+            chartArea1.Name = "ChartArea1";
+            this.pieChart1.ChartAreas.Add(chartArea1);
+            this.pieChart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.pieChart1.Legends.Add(legend1);
+            this.pieChart1.Location = new System.Drawing.Point(0, 0);
+            this.pieChart1.Name = "pieChart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "s1";
+            this.pieChart1.Series.Add(series1);
+            this.pieChart1.Size = new System.Drawing.Size(732, 427);
+            this.pieChart1.TabIndex = 0;
             // 
             // LevelConcentrationReport
             // 
@@ -130,7 +142,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(970, 491);
             this.Controls.Add(this.btReturnMainMenu);
             this.Controls.Add(this.label1);
@@ -142,6 +153,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pieChart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +167,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btReturnMainMenu;
         private System.Windows.Forms.Button btShowPieChart;
-        private LiveCharts.WinForms.PieChart pieChart1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart pieChart1;
     }
 }

@@ -56,7 +56,7 @@ namespace model
             OptionsVariable();
         }
 
-        private String ConsultData(String URLData)
+        public String ConsultData(String URLData)
         {
 
             String valueOriginal = "";
