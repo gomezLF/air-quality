@@ -81,6 +81,13 @@ namespace model
             return list;
         }
 
+        public Data GetInformationFromConsult(String URLData)
+        {
+            Data data = JsonConvert.DeserializeObject<Data>(ConsultData(URLData));
+
+            return data;
+        }
+
         public String GetPieValue(String valueInData)
         {
             String pieValue = "";

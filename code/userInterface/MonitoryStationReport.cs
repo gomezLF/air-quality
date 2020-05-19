@@ -45,7 +45,8 @@ namespace userInterface
             gmap.ShowCenter = false;
             gmap.Zoom = 5;
             gmap.SetPositionByKeywords("Colombia");
-            
+
+            CreateStationMarkers();
         }
 
         private void loadCBDepartments()
@@ -64,16 +65,32 @@ namespace userInterface
             this.Close();
         }
 
+        private void CreateStationMarkers()
+        {
+            String url = $"{DatabaseAdministrator.URL}?$select=distinct {DatabaseAdministrator.MUNICIPALITY},{DatabaseAdministrator.DEPARTMENT},{DatabaseAdministrator.STATION_NAME}";
+            List<Data> data = this.databaseAdministrator.Getinformation(url);
+
+            foreach (Data element in data)
+            {
+                String consult = $"{element.nombre_del_municipio}, {element.departamento}, Colombia";
+                CreateMarker(consult);
+            }
+        }
+
         private void CreateMarker(String element)
         {
             PointLatLng point;
             gmap.GetPositionByKeywords(element, out point);
 
+            gmap.GetPositionByKeywords(element, out point);
+            GMarkerGoogle marker = new GMarkerGoogle(point, GMarkerGoogleType.orange);
 
-            GMapOverlay markers = new GMapOverlay("markers");
-            GMapMarker marker = new GMarkerGoogle(new PointLatLng(4.6097102, -74.081749), GMarkerGoogleType.blue_pushpin);
-            markers.Markers.Add(marker);
-            gmap.Overlays.Add(markers);
+            marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+            marker.ToolTipText = String.Format("Ubicacion: \n {0}", element);
+
+            GMapOverlay GMapOverlay = new GMapOverlay("Markers");
+            GMapOverlay.Markers.Add(marker);
+            gmap.Overlays.Add(GMapOverlay);
         }
 
         public void GetData()
