@@ -35,12 +35,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataSelector = new System.Windows.Forms.CheckedListBox();
             this.mapGenerator = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.department_txtBox = new System.Windows.Forms.TextBox();
+            this.contamination_txtBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
@@ -123,6 +130,54 @@
             this.mapGenerator.Size = new System.Drawing.Size(519, 503);
             this.mapGenerator.TabIndex = 1;
             // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.contamination_txtBox);
+            this.panel2.Controls.Add(this.department_txtBox);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(10, 271);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(243, 158);
+            this.panel2.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Departamento";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(159, 15);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nivel de Contaminación";
+            // 
+            // department_txtBox
+            // 
+            this.department_txtBox.Location = new System.Drawing.Point(6, 40);
+            this.department_txtBox.Name = "department_txtBox";
+            this.department_txtBox.ReadOnly = true;
+            this.department_txtBox.Size = new System.Drawing.Size(162, 20);
+            this.department_txtBox.TabIndex = 2;
+            // 
+            // contamination_txtBox
+            // 
+            this.contamination_txtBox.Location = new System.Drawing.Point(6, 119);
+            this.contamination_txtBox.Name = "contamination_txtBox";
+            this.contamination_txtBox.ReadOnly = true;
+            this.contamination_txtBox.Size = new System.Drawing.Size(162, 20);
+            this.contamination_txtBox.TabIndex = 3;
+            // 
             // HeatMapReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,6 +193,8 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -151,5 +208,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox contamination_txtBox;
+        private System.Windows.Forms.TextBox department_txtBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

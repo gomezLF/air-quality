@@ -96,6 +96,19 @@ namespace model
             return pieValue;
         }
 
+	public double DataAverage(List<double> list)
+        {
+            double average = 0.0;
+
+            foreach (double d in list)
+            {
+                average += d;
+            }
+            average = average / list.Count;
+
+            return average;
+        }
+
         #region Metodos para saber las opciones de filtrado que posee cada columna
 
         private void OptionsEnviromentalAuthorities()

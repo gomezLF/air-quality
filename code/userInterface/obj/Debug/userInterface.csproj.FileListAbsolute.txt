@@ -94,3 +94,5 @@ C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\System
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\System.IO.Packaging.xml
 E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\GMap.NET.Core.dll
 E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\GMap.NET.Core.dll
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\GMap.NET.WindowsForms.dll
