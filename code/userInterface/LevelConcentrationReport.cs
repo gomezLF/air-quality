@@ -51,17 +51,22 @@ namespace userInterface
 
         private void btShowPieChart_Click(object sender, EventArgs e)
         {
+
+           
+
             if (cbDepartments.SelectedItem != null)
             {
+                pieChart1.Series["s1"].Points.Clear();
+                pieChart1.Titles.Clear();
                 pieChart1.Titles.Add($"Niveles de Concentración en {cbDepartments.SelectedItem}");
                 pieChart1.Series["s1"].IsValueShownAsLabel = true;
 
                 foreach (var variable in this.databaseAdministrator.variable)
                 {
                     String url = DatabaseAdministrator.URL + $"?departamento={cbDepartments.SelectedItem}&variable={variable}&$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                    PieValues(this.databaseAdministrator.ConsultData(url));
+                    string theValue = this.databaseAdministrator.GetPieValue(this.databaseAdministrator.ConsultData(url));
 
-                    pieChart1.Series["s1"].Points.AddXY(variable, "100");
+                    pieChart1.Series["s1"].Points.AddXY(variable, theValue);
                 }
 
             }else
@@ -70,14 +75,7 @@ namespace userInterface
             }
         }
 
-        private String PieValues(String value)
-        {
-            String pieValue = "";
-            
-            Console.WriteLine(value);
-
-            return pieValue;
-        }
+        
 
     }
 }   
