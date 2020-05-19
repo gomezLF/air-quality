@@ -42,6 +42,8 @@ namespace model
         public List<String> variable { get; set; }
         public List<String> units { get; set; }
 
+        public List<Data> TheData { get; set; }
+
         public DatabaseAdministrator()
         {
             OptionsEnviromentalAuthorities();
@@ -54,7 +56,7 @@ namespace model
             OptionsVariable();
         }
 
-        private String ConsultData(String URLData)
+        public String ConsultData(String URLData)
         {
 
             String valueOriginal = "";
@@ -73,6 +75,7 @@ namespace model
         public List<Data> Getinformation(String URLData)
         {
             List<Data> list = JsonConvert.DeserializeObject<List<Data>>(ConsultData(URLData));
+            TheData = list;
 
             return list;
         }

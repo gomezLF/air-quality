@@ -30,17 +30,20 @@ namespace userInterface
 
         private void StudyPlace_button_Click(object sender, EventArgs e)
         {
-
+            StudyPlaceReport studyPlace = new StudyPlaceReport(DatabaseAdministrator);
+            OpenReport(studyPlace);
         }
 
         private void LevelConcentration_button_Click(object sender, EventArgs e)
         {
-
+            LevelConcentrationReport levelConcentration = new LevelConcentrationReport(DatabaseAdministrator);
+            OpenReport(levelConcentration);
         }
 
         private void MonitoryStation_button_Click(object sender, EventArgs e)
         {
-
+            MonitoryStationReport monitoryStation = new MonitoryStationReport(DatabaseAdministrator);
+            OpenReport(monitoryStation);
         }
 
 
