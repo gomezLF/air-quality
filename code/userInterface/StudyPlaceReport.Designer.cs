@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudyPlaceReport));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btShowInfo = new System.Windows.Forms.Button();
@@ -42,12 +41,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btReturnToMainMenu = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,16 +62,18 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(108, 21);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(862, 81);
+            this.panel1.Size = new System.Drawing.Size(858, 85);
             this.panel1.TabIndex = 0;
             // 
             // panel4
             // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.btShowInfo);
             this.panel4.Location = new System.Drawing.Point(625, 6);
             this.panel4.Name = "panel4";
@@ -73,7 +82,8 @@
             // 
             // btShowInfo
             // 
-            this.btShowInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btShowInfo.BackColor = System.Drawing.Color.Transparent;
+            this.btShowInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btShowInfo.Location = new System.Drawing.Point(38, 20);
             this.btShowInfo.Name = "btShowInfo";
             this.btShowInfo.Size = new System.Drawing.Size(128, 23);
@@ -83,6 +93,7 @@
             // 
             // panel3
             // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.rbCompareToTwo);
             this.panel3.Controls.Add(this.rbHistorical);
             this.panel3.Controls.Add(this.rbProyection);
@@ -94,6 +105,7 @@
             // rbCompareToTwo
             // 
             this.rbCompareToTwo.AutoSize = true;
+            this.rbCompareToTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCompareToTwo.Location = new System.Drawing.Point(49, 48);
             this.rbCompareToTwo.Name = "rbCompareToTwo";
             this.rbCompareToTwo.Size = new System.Drawing.Size(212, 17);
@@ -105,6 +117,7 @@
             // rbHistorical
             // 
             this.rbHistorical.AutoSize = true;
+            this.rbHistorical.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbHistorical.Location = new System.Drawing.Point(49, 5);
             this.rbHistorical.Name = "rbHistorical";
             this.rbHistorical.Size = new System.Drawing.Size(102, 17);
@@ -116,6 +129,7 @@
             // rbProyection
             // 
             this.rbProyection.AutoSize = true;
+            this.rbProyection.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbProyection.Location = new System.Drawing.Point(49, 28);
             this.rbProyection.Name = "rbProyection";
             this.rbProyection.Size = new System.Drawing.Size(115, 17);
@@ -126,6 +140,8 @@
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.cbDepartments);
             this.panel2.Location = new System.Drawing.Point(37, 3);
             this.panel2.Name = "panel2";
@@ -135,7 +151,7 @@
             // cbDepartments
             // 
             this.cbDepartments.FormattingEnabled = true;
-            this.cbDepartments.Location = new System.Drawing.Point(16, 25);
+            this.cbDepartments.Location = new System.Drawing.Point(16, 45);
             this.cbDepartments.Name = "cbDepartments";
             this.cbDepartments.Size = new System.Drawing.Size(187, 21);
             this.cbDepartments.TabIndex = 0;
@@ -144,18 +160,21 @@
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.AutoSize = true;
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.dataGridView1);
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(89, 108);
+            this.panel5.Location = new System.Drawing.Point(-29, 99);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(904, 230);
+            this.panel5.Size = new System.Drawing.Size(917, 233);
             this.panel5.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(404, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos históricos";
             // 
@@ -163,43 +182,97 @@
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel6.AutoSize = true;
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.Controls.Add(this.dataGridView2);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(89, 344);
+            this.panel6.Location = new System.Drawing.Point(-29, 335);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(904, 224);
+            this.panel6.Size = new System.Drawing.Size(917, 278);
             this.panel6.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(404, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 13);
+            this.label2.Size = new System.Drawing.Size(114, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Datos Proyectados";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(33, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Seleccione un departamento ";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.btReturnToMainMenu);
+            this.panel7.Location = new System.Drawing.Point(587, 616);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(249, 38);
+            this.panel7.TabIndex = 3;
+            // 
+            // btReturnToMainMenu
+            // 
+            this.btReturnToMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btReturnToMainMenu.Location = new System.Drawing.Point(31, 3);
+            this.btReturnToMainMenu.Name = "btReturnToMainMenu";
+            this.btReturnToMainMenu.Size = new System.Drawing.Size(189, 31);
+            this.btReturnToMainMenu.TabIndex = 0;
+            this.btReturnToMainMenu.Text = "Regresar al Menú Principal";
+            this.btReturnToMainMenu.UseVisualStyleBackColor = true;
+            this.btReturnToMainMenu.Click += new System.EventHandler(this.btReturnToMainMenu_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(22, 20);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(892, 210);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(22, 16);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(892, 259);
+            this.dataGridView2.TabIndex = 1;
             // 
             // StudyPlaceReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.IndianRed;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1072, 570);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(882, 654);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Name = "StudyPlaceReport";
             this.Text = "StudyPlaceReport";
+            this.Load += new System.EventHandler(this.StudyPlaceReport_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +293,10 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btReturnToMainMenu;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

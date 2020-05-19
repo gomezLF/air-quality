@@ -105,3 +105,12 @@ C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\Entity
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\System.Data.SQLite.xml
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\System.Data.SQLite.dll.config
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\EntityFramework.dll
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\EntityFramework.SqlServer.dll
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\System.Data.SQLite.dll
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\System.Data.SQLite.EF6.dll
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\System.Data.SQLite.Linq.dll
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\EntityFramework.xml
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\EntityFramework.SqlServer.xml
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\System.Data.SQLite.xml
+E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\System.Data.SQLite.dll.config

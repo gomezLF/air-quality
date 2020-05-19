@@ -43,7 +43,13 @@ namespace userInterface
             this.stationsTable.Rows.Clear();
             this.stationsTable.Columns.Clear();
 
-            CreateStationByDepartment();
+            if (cbDepartments.SelectedItem != null)
+            {
+                CreateStationByDepartment();
+            }
+            else {
+                MessageBox.Show("Debe seleccionar un departamento previamente.");
+            }
         }
 
 
