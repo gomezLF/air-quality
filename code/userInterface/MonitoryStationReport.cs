@@ -85,7 +85,7 @@ namespace userInterface
             String url = $"{DatabaseAdministrator.URL}?$select=distinct {DatabaseAdministrator.MUNICIPALITY},{DatabaseAdministrator.DEPARTMENT},{DatabaseAdministrator.STATION_NAME}";
             List<Data> data = this.databaseAdministrator.Getinformation(url);
             this.stationsTable.DataSource = data;
-            EliminateColumns();
+            HideColumns();
 
             foreach (Data element in data)
             {
