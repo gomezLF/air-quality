@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using Newtonsoft.Json;
 
@@ -42,6 +43,8 @@ namespace model
         public List<String> variable { get; set; }
         public List<String> units { get; set; }
 
+        public List<Data> TheData { get; set; }
+
         public DatabaseAdministrator()
         {
             OptionsEnviromentalAuthorities();
@@ -54,7 +57,7 @@ namespace model
             OptionsVariable();
         }
 
-        private String ConsultData(String URLData)
+        public String ConsultData(String URLData)
         {
 
             String valueOriginal = "";
@@ -73,11 +76,25 @@ namespace model
         public List<Data> Getinformation(String URLData)
         {
             List<Data> list = JsonConvert.DeserializeObject<List<Data>>(ConsultData(URLData));
+            TheData = list;
 
             return list;
         }
 
+        public String GetPieValue(String valueInData)
+        {
+            String pieValue = "";
 
+
+            if (valueInData.ElementAt(3).Equals('a'))
+            {
+                String[] result = valueInData.Split(':');
+                String[] result2 = result[1].Split('"');
+                Console.WriteLine(result2[1]);
+                pieValue = result2[1];
+            }
+            return pieValue;
+        }
 
         #region Metodos para saber las opciones de filtrado que posee cada columna
 

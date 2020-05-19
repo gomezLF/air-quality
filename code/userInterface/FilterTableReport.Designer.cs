@@ -45,6 +45,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.filter_button = new System.Windows.Forms.Button();
             this.description_tooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.btReturnMainMenu = new System.Windows.Forms.Button();
             this.selectionData_panel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.filter_panel.SuspendLayout();
@@ -56,6 +57,7 @@
             // 
             this.selectionData_panel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.selectionData_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selectionData_panel.Controls.Add(this.btReturnMainMenu);
             this.selectionData_panel.Controls.Add(this.availableData_listBox);
             this.selectionData_panel.Controls.Add(this.showData);
             this.selectionData_panel.Controls.Add(this.label4);
@@ -250,6 +252,16 @@
             this.filter_button.UseVisualStyleBackColor = false;
             this.filter_button.Click += new System.EventHandler(this.Filter_button_Click);
             // 
+            // btReturnMainMenu
+            // 
+            this.btReturnMainMenu.Location = new System.Drawing.Point(11, 488);
+            this.btReturnMainMenu.Name = "btReturnMainMenu";
+            this.btReturnMainMenu.Size = new System.Drawing.Size(169, 31);
+            this.btReturnMainMenu.TabIndex = 8;
+            this.btReturnMainMenu.Text = "Regresar al Menú Principal";
+            this.btReturnMainMenu.UseVisualStyleBackColor = true;
+            this.btReturnMainMenu.Click += new System.EventHandler(this.btReturnMainMenu_Click);
+            // 
             // FilterTableReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,5 +300,6 @@
         private System.Windows.Forms.FlowLayoutPanel filterOption_panel;
         private System.Windows.Forms.Panel dataViewer;
         private System.Windows.Forms.ListBox availableData_listBox;
+        private System.Windows.Forms.Button btReturnMainMenu;
     }
 }
