@@ -27,15 +27,18 @@ namespace userInterface
     public partial class MonitoryStationReport : Form
     {
         private DatabaseAdministrator databaseAdministrator;
+        private Dictionary<String, String> stationLoaded;
+        
         public MonitoryStationReport(DatabaseAdministrator databaseAdministrator)
         {
             InitializeComponent();
             this.databaseAdministrator = databaseAdministrator;
+            this.stationLoaded = new Dictionary<string, string>();
         }
 
         private void MonitoryStationReport_Load(object sender, EventArgs e)
         {
-            loadCBDepartments();
+            LoadCBDepartments();
 
             
             GMaps.Instance.Mode = AccessMode.ServerOnly;
@@ -49,7 +52,7 @@ namespace userInterface
             CreateStationMarkers();
         }
 
-        private void loadCBDepartments()
+        private void LoadCBDepartments()
         {
             foreach (string dep in this.databaseAdministrator.department)
             {
@@ -73,29 +76,40 @@ namespace userInterface
             foreach (Data element in data)
             {
                 String consult = $"{element.nombre_del_municipio}, {element.departamento}, Colombia";
-                CreateMarker(consult);
+
+                if (!stationLoaded.ContainsKey(consult))
+                {
+                    this.stationLoaded.Add(consult, element.nombre_de_la_estaci_n);
+                }else
+                {
+                    this.stationLoaded[consult] += "\n" + element.nombre_de_la_estaci_n;
+                }
+            }
+
+            foreach (String variable in this.stationLoaded.Keys)
+            {
+                CreateMarker(variable, stationLoaded[variable]);
             }
         }
 
-        private void CreateMarker(String element)
+        private void CreateMarker(String ubication, String stations)
         {
             PointLatLng point;
-            gmap.GetPositionByKeywords(element, out point);
 
-            gmap.GetPositionByKeywords(element, out point);
+            gmap.GetPositionByKeywords(ubication, out point);
             GMarkerGoogle marker = new GMarkerGoogle(point, GMarkerGoogleType.orange);
 
             marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-            marker.ToolTipText = String.Format("Ubicacion: \n {0}", element);
+            marker.ToolTipText = String.Format($"Ubicación: {ubication} \n Estaciones: {stations}");
 
-            GMapOverlay GMapOverlay = new GMapOverlay("Markers");
-            GMapOverlay.Markers.Add(marker);
-            gmap.Overlays.Add(GMapOverlay);
+            GMapOverlay gMapOverlay = new GMapOverlay("Markers");
+            gMapOverlay.Markers.Add(marker);
+            gmap.Overlays.Add(gMapOverlay);
         }
 
         public void GetData()
         {
-            
+                
         }
 
 
