@@ -96,3 +96,12 @@ E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\a
 E:\OneDrive - Universidad Icesi (@correo.icesi.edu.co)\Programming Proyects\C#\air-quality\code\userInterface\bin\Debug\GMap.NET.WindowsForms.dll
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\GMap.NET.Core.dll
 C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\EntityFramework.dll
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\System.Data.SQLite.dll
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\EntityFramework.xml
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\System.Data.SQLite.xml
+C:\Users\Windows 10\source\repos\air-quality\code\userInterface\bin\Debug\System.Data.SQLite.dll.config

@@ -37,12 +37,15 @@ namespace userInterface
         {
             loadCBDepartments();
 
-            gmap.MapProvider = BingHybridMapProvider.Instance;
+            
             GMaps.Instance.Mode = AccessMode.ServerOnly;
-            gmap.Position = new GMap.NET.PointLatLng(4.570868, -74.2973328);
+            gmap.DragButton = MouseButtons.Right;
+            gmap.CanDragMap = true;
+            gmap.MapProvider = GMapProviders.OpenStreetMap;
             gmap.ShowCenter = false;
-
-            CreateMarker();
+            gmap.Zoom = 5;
+            gmap.SetPositionByKeywords("Colombia");
+            
         }
 
         private void loadCBDepartments()
@@ -61,21 +64,22 @@ namespace userInterface
             this.Close();
         }
 
-
-        public void GetData() { }
-
-
-        private void CreateMarker()
+        private void CreateMarker(String element)
         {
+            PointLatLng point;
+            gmap.GetPositionByKeywords(element, out point);
+
+
             GMapOverlay markers = new GMapOverlay("markers");
-            GMapMarker marker = new GMarkerGoogle(
-                new PointLatLng(4.6097102, -74.081749),
-                GMarkerGoogleType.blue_pushpin);
+            GMapMarker marker = new GMarkerGoogle(new PointLatLng(4.6097102, -74.081749), GMarkerGoogleType.blue_pushpin);
             markers.Markers.Add(marker);
             gmap.Overlays.Add(markers);
         }
 
-
+        public void GetData()
+        {
+            
+        }
 
 
 

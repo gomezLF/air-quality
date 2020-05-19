@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MonitoryStationReport));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btShowAllStations = new System.Windows.Forms.Button();
             this.cbDepartments = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -38,7 +38,6 @@
             this.gmap = new GMap.NET.WindowsForms.GMapControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btReturnMainMenu = new System.Windows.Forms.Button();
-            this.btShowAllStations = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,6 +68,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(870, 39);
             this.panel2.TabIndex = 1;
+            // 
+            // btShowAllStations
+            // 
+            this.btShowAllStations.Location = new System.Drawing.Point(616, 6);
+            this.btShowAllStations.Name = "btShowAllStations";
+            this.btShowAllStations.Size = new System.Drawing.Size(185, 23);
+            this.btShowAllStations.TabIndex = 1;
+            this.btShowAllStations.Text = "Mostrar todas las estaciones";
+            this.btShowAllStations.UseVisualStyleBackColor = true;
             // 
             // cbDepartments
             // 
@@ -118,7 +126,6 @@
             this.gmap.EmptyTileColor = System.Drawing.Color.Navy;
             this.gmap.GrayScaleMode = false;
             this.gmap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.gmap.LevelsKeepInMemmory = 5;
             this.gmap.Location = new System.Drawing.Point(48, 0);
             this.gmap.MarkersEnabled = true;
             this.gmap.MaxZoom = 18;
@@ -157,22 +164,12 @@
             this.btReturnMainMenu.UseVisualStyleBackColor = true;
             this.btReturnMainMenu.Click += new System.EventHandler(this.btReturnMainMenu_Click);
             // 
-            // btShowAllStations
-            // 
-            this.btShowAllStations.Location = new System.Drawing.Point(616, 6);
-            this.btShowAllStations.Name = "btShowAllStations";
-            this.btShowAllStations.Size = new System.Drawing.Size(185, 23);
-            this.btShowAllStations.TabIndex = 1;
-            this.btShowAllStations.Text = "Mostrar todas las estaciones";
-            this.btShowAllStations.UseVisualStyleBackColor = true;
-            // 
             // MonitoryStationReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.OliveDrab;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(985, 567);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
