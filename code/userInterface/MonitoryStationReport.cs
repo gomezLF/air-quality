@@ -48,6 +48,18 @@ namespace userInterface
             gmap.ShowCenter = false;
             gmap.Zoom = 5;
             gmap.SetPositionByKeywords("Colombia");
+        }
+
+        private void ShowStationsByDepartments_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void ShowAllStations_Click(object sender, EventArgs e)
+        {
+            this.stationLoaded.Clear();
+            this.gmap.Overlays.Clear();
 
             CreateStationMarkers();
         }
@@ -60,7 +72,7 @@ namespace userInterface
             }
         }
 
-        private void btReturnMainMenu_Click(object sender, EventArgs e)
+        private void ReturnMainMenu_Click(object sender, EventArgs e)
         {
             MainMenu mainMenu = new MainMenu();
             mainMenu.DatabaseAdministrator = this.databaseAdministrator;
@@ -72,6 +84,8 @@ namespace userInterface
         {
             String url = $"{DatabaseAdministrator.URL}?$select=distinct {DatabaseAdministrator.MUNICIPALITY},{DatabaseAdministrator.DEPARTMENT},{DatabaseAdministrator.STATION_NAME}";
             List<Data> data = this.databaseAdministrator.Getinformation(url);
+            this.stationsTable.DataSource = data;
+            EliminateColumns();
 
             foreach (Data element in data)
             {
@@ -107,13 +121,16 @@ namespace userInterface
             gmap.Overlays.Add(gMapOverlay);
         }
 
-        public void GetData()
+        private void HideColumns()
         {
-                
+            for (int i = 0; i < this.stationsTable.Columns.Count; i++)
+            {
+                if (i != 2 && i != 7 && i != 9)
+                {
+                    this.stationsTable.Columns[i].Visible = false;
+                }
+            }
         }
-
-
-
 
     }
 }
