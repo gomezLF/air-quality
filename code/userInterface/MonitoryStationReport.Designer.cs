@@ -28,87 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.showStationsByDepartments = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btShowAllStations = new System.Windows.Forms.Button();
-            this.cbDepartments = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.stationsTable = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.gmap = new GMap.NET.WindowsForms.GMapControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btReturnMainMenu = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
+            this.cbDepartments = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btShowAllStations = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.showStationsByDepartments = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stationsTable)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Estaciones de Monitoreo";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.AutoSize = true;
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.showStationsByDepartments);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.btShowAllStations);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.cbDepartments);
-            this.panel2.Location = new System.Drawing.Point(51, 10);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(927, 48);
-            this.panel2.TabIndex = 1;
-            // 
-            // showStationsByDepartments
-            // 
-            this.showStationsByDepartments.Location = new System.Drawing.Point(493, 9);
-            this.showStationsByDepartments.Name = "showStationsByDepartments";
-            this.showStationsByDepartments.Size = new System.Drawing.Size(194, 23);
-            this.showStationsByDepartments.TabIndex = 3;
-            this.showStationsByDepartments.Text = "Mostrar Estaciones por Departamento";
-            this.showStationsByDepartments.UseVisualStyleBackColor = true;
-            this.showStationsByDepartments.Click += new System.EventHandler(this.ShowStationsByDepartments_Click);
-            // 
-            // label2
-            // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(727, -2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(2, 46);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            // 
-            // btShowAllStations
-            // 
-            this.btShowAllStations.Location = new System.Drawing.Point(735, 6);
-            this.btShowAllStations.Name = "btShowAllStations";
-            this.btShowAllStations.Size = new System.Drawing.Size(185, 23);
-            this.btShowAllStations.TabIndex = 1;
-            this.btShowAllStations.Text = "Mostrar todas las estaciones";
-            this.btShowAllStations.UseVisualStyleBackColor = true;
-            this.btShowAllStations.Click += new System.EventHandler(this.ShowAllStations_Click);
-            // 
-            // cbDepartments
-            // 
-            this.cbDepartments.FormattingEnabled = true;
-            this.cbDepartments.Location = new System.Drawing.Point(211, 8);
-            this.cbDepartments.Name = "cbDepartments";
-            this.cbDepartments.Size = new System.Drawing.Size(232, 21);
-            this.cbDepartments.TabIndex = 0;
             // 
             // panel3
             // 
@@ -189,6 +126,69 @@
             this.btReturnMainMenu.UseVisualStyleBackColor = true;
             this.btReturnMainMenu.Click += new System.EventHandler(this.ReturnMainMenu_Click);
             // 
+            // cbDepartments
+            // 
+            this.cbDepartments.FormattingEnabled = true;
+            this.cbDepartments.Location = new System.Drawing.Point(211, 8);
+            this.cbDepartments.Name = "cbDepartments";
+            this.cbDepartments.Size = new System.Drawing.Size(232, 21);
+            this.cbDepartments.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Estaciones de Monitoreo";
+            // 
+            // btShowAllStations
+            // 
+            this.btShowAllStations.Location = new System.Drawing.Point(735, 6);
+            this.btShowAllStations.Name = "btShowAllStations";
+            this.btShowAllStations.Size = new System.Drawing.Size(185, 23);
+            this.btShowAllStations.TabIndex = 1;
+            this.btShowAllStations.Text = "Mostrar todas las estaciones";
+            this.btShowAllStations.UseVisualStyleBackColor = true;
+            this.btShowAllStations.Click += new System.EventHandler(this.ShowAllStations_Click);
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Location = new System.Drawing.Point(727, -2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(2, 46);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "label2";
+            // 
+            // showStationsByDepartments
+            // 
+            this.showStationsByDepartments.Location = new System.Drawing.Point(493, 9);
+            this.showStationsByDepartments.Name = "showStationsByDepartments";
+            this.showStationsByDepartments.Size = new System.Drawing.Size(194, 23);
+            this.showStationsByDepartments.TabIndex = 3;
+            this.showStationsByDepartments.Text = "Mostrar Estaciones por Departamento";
+            this.showStationsByDepartments.UseVisualStyleBackColor = true;
+            this.showStationsByDepartments.Click += new System.EventHandler(this.ShowStationsByDepartments_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.AutoSize = true;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.showStationsByDepartments);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btShowAllStations);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.cbDepartments);
+            this.panel2.Location = new System.Drawing.Point(28, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(927, 48);
+            this.panel2.TabIndex = 1;
+            // 
             // MonitoryStationReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,29 +203,29 @@
             this.Name = "MonitoryStationReport";
             this.Text = "MonitoryStationReport";
             this.Load += new System.EventHandler(this.MonitoryStationReport_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stationsTable)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox cbDepartments;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btReturnMainMenu;
         private System.Windows.Forms.DataGridView stationsTable;
         private GMap.NET.WindowsForms.GMapControl gmap;
+        private System.Windows.Forms.ComboBox cbDepartments;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btShowAllStations;
-        private System.Windows.Forms.Button showStationsByDepartments;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button showStationsByDepartments;
+        private System.Windows.Forms.Panel panel2;
     }
 }

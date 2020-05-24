@@ -29,250 +29,131 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btShowInfo = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.rbCompareToTwo = new System.Windows.Forms.RadioButton();
-            this.rbHistorical = new System.Windows.Forms.RadioButton();
-            this.rbProyection = new System.Windows.Forms.RadioButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cbDepartments = new System.Windows.Forms.ComboBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btReturnToMainMenu = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.chartContainer_panel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.AutoSize = true;
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.checkedListBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(858, 85);
+            this.panel1.Size = new System.Drawing.Size(882, 89);
             this.panel1.TabIndex = 0;
             // 
-            // panel4
+            // checkedListBox1
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.btShowInfo);
-            this.panel4.Location = new System.Drawing.Point(625, 6);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(197, 72);
-            this.panel4.TabIndex = 2;
+            this.checkedListBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Solo Datos Proyectados",
+            "Solo Datos Históricos",
+            "Comparar Datos Históricos con Datos Proyectados"});
+            this.checkedListBox1.Location = new System.Drawing.Point(477, 18);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(270, 60);
+            this.checkedListBox1.TabIndex = 0;
             // 
-            // btShowInfo
+            // comboBox1
             // 
-            this.btShowInfo.BackColor = System.Drawing.Color.Transparent;
-            this.btShowInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btShowInfo.Location = new System.Drawing.Point(38, 20);
-            this.btShowInfo.Name = "btShowInfo";
-            this.btShowInfo.Size = new System.Drawing.Size(128, 23);
-            this.btShowInfo.TabIndex = 1;
-            this.btShowInfo.Text = "Mostrar Información";
-            this.btShowInfo.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.rbCompareToTwo);
-            this.panel3.Controls.Add(this.rbHistorical);
-            this.panel3.Controls.Add(this.rbProyection);
-            this.panel3.Location = new System.Drawing.Point(275, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(331, 74);
-            this.panel3.TabIndex = 1;
-            // 
-            // rbCompareToTwo
-            // 
-            this.rbCompareToTwo.AutoSize = true;
-            this.rbCompareToTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbCompareToTwo.Location = new System.Drawing.Point(49, 48);
-            this.rbCompareToTwo.Name = "rbCompareToTwo";
-            this.rbCompareToTwo.Size = new System.Drawing.Size(212, 17);
-            this.rbCompareToTwo.TabIndex = 3;
-            this.rbCompareToTwo.TabStop = true;
-            this.rbCompareToTwo.Text = "Comparación Históricos vs Proyectados";
-            this.rbCompareToTwo.UseVisualStyleBackColor = true;
-            // 
-            // rbHistorical
-            // 
-            this.rbHistorical.AutoSize = true;
-            this.rbHistorical.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbHistorical.Location = new System.Drawing.Point(49, 5);
-            this.rbHistorical.Name = "rbHistorical";
-            this.rbHistorical.Size = new System.Drawing.Size(102, 17);
-            this.rbHistorical.TabIndex = 1;
-            this.rbHistorical.TabStop = true;
-            this.rbHistorical.Text = "Datos Historicos";
-            this.rbHistorical.UseVisualStyleBackColor = true;
-            // 
-            // rbProyection
-            // 
-            this.rbProyection.AutoSize = true;
-            this.rbProyection.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbProyection.Location = new System.Drawing.Point(49, 28);
-            this.rbProyection.Name = "rbProyection";
-            this.rbProyection.Size = new System.Drawing.Size(115, 17);
-            this.rbProyection.TabIndex = 2;
-            this.rbProyection.TabStop = true;
-            this.rbProyection.Text = "Datos Proyectados";
-            this.rbProyection.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.cbDepartments);
-            this.panel2.Location = new System.Drawing.Point(37, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(231, 75);
-            this.panel2.TabIndex = 0;
-            // 
-            // cbDepartments
-            // 
-            this.cbDepartments.FormattingEnabled = true;
-            this.cbDepartments.Location = new System.Drawing.Point(16, 45);
-            this.cbDepartments.Name = "cbDepartments";
-            this.cbDepartments.Size = new System.Drawing.Size(187, 21);
-            this.cbDepartments.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel5.AutoSize = true;
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.dataGridView1);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(-29, 99);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(917, 233);
-            this.panel5.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(404, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Datos históricos";
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel6.AutoSize = true;
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.dataGridView2);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(-29, 335);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(917, 278);
-            this.panel6.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(404, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Datos Proyectados";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(56, 18);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(231, 21);
+            this.comboBox1.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 23);
+            this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(93, 1);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Seleccione un departamento ";
+            this.label3.Size = new System.Drawing.Size(165, 14);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Seleccione un Departamento";
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.Location = new System.Drawing.Point(96, 55);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Mostrar Información";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Location = new System.Drawing.Point(398, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(2, 85);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "label4";
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.btReturnToMainMenu);
-            this.panel7.Location = new System.Drawing.Point(587, 616);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 616);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(249, 38);
-            this.panel7.TabIndex = 3;
+            this.panel7.Size = new System.Drawing.Size(882, 38);
+            this.panel7.TabIndex = 12;
             // 
             // btReturnToMainMenu
             // 
             this.btReturnToMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btReturnToMainMenu.Location = new System.Drawing.Point(31, 3);
+            this.btReturnToMainMenu.Location = new System.Drawing.Point(368, 3);
             this.btReturnToMainMenu.Name = "btReturnToMainMenu";
             this.btReturnToMainMenu.Size = new System.Drawing.Size(189, 31);
             this.btReturnToMainMenu.TabIndex = 0;
             this.btReturnToMainMenu.Text = "Regresar al Menú Principal";
             this.btReturnToMainMenu.UseVisualStyleBackColor = true;
-            this.btReturnToMainMenu.Click += new System.EventHandler(this.btReturnToMainMenu_Click);
             // 
-            // dataGridView1
+            // chartContainer_panel
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(892, 210);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(22, 16);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(892, 259);
-            this.dataGridView2.TabIndex = 1;
+            this.chartContainer_panel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.chartContainer_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartContainer_panel.Location = new System.Drawing.Point(0, 89);
+            this.chartContainer_panel.Name = "chartContainer_panel";
+            this.chartContainer_panel.Size = new System.Drawing.Size(882, 527);
+            this.chartContainer_panel.TabIndex = 13;
             // 
             // StudyPlaceReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(882, 654);
+            this.Controls.Add(this.chartContainer_panel);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Name = "StudyPlaceReport";
             this.Text = "StudyPlaceReport";
             this.Load += new System.EventHandler(this.StudyPlaceReport_Load);
             this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,22 +162,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btShowInfo;
-        private System.Windows.Forms.ComboBox cbDepartments;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RadioButton rbCompareToTwo;
-        private System.Windows.Forms.RadioButton rbHistorical;
-        private System.Windows.Forms.RadioButton rbProyection;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btReturnToMainMenu;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Panel chartContainer_panel;
     }
 }
