@@ -51,9 +51,6 @@ namespace userInterface
 
         private void btShowPieChart_Click(object sender, EventArgs e)
         {
-
-           
-
             if (cbDepartments.SelectedItem != null)
             {
                 pieChart1.Series["s1"].Points.Clear();

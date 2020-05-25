@@ -40,7 +40,17 @@ namespace userInterface
 
         private void DataSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            for (int i = 0; i < dataSelector.Items.Count; i++)
+            {
+                dataSelector.SetItemChecked(i, false);
+            }
+
+            int index = dataSelector.SelectedIndex;
+
+            if (index != -1)
+            {
+                dataSelector.SetItemChecked(index, true);
+            }
         }
 
         private void ShowMap_Click(object sender, EventArgs e)
