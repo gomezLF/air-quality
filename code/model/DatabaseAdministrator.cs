@@ -90,15 +90,15 @@ namespace model
 
         public String GetChartValue(String valueInData)
         {
-            String pieValue = "";
+            String chartValue = "";
 
             if (valueInData.ElementAt(3).Equals('a'))
             {
                 String[] result = valueInData.Split(':');
                 String[] result2 = result[1].Split('"');
-                pieValue = result2[1];
+                chartValue = result2[1];
             }
-            return pieValue;
+            return chartValue;
         }
 
 	public double DataAverage(List<double> list)
