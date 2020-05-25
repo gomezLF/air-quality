@@ -81,6 +81,8 @@ namespace userInterface
                 chart.Dock = DockStyle.Bottom;
                 chart.Size = new Size(this.chartContainer_panel.Width, 263);
             }
+
+
         }
 
         private void CreateOnlyProjectedData(bool fullSize)

@@ -55,7 +55,14 @@ namespace userInterface
 
         private void ShowMap_Click(object sender, EventArgs e)
         {
-            PrintHeatMap();
+            if (dataSelector.CheckedItems.Count == 1)
+            {
+                PrintHeatMap(dataSelector.SelectedItem.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Para generar el mapa de calor, seleccione una de las dos opciones previamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void ReturnMainMenu_Click(object sender, EventArgs e)
@@ -96,16 +103,22 @@ namespace userInterface
             landIdentificator.Add("VALLE DEL CAUCA", "1143");
         }
 
-        private void PrintHeatMap()
+        private void PrintHeatMap(String map)
         {
             this.heatMap.Source = $"{Application.StartupPath}\\Colombia.xml";
             this.mapGenerator.Controls.Add(this.heatMap);
             this.heatMap.Dock = DockStyle.Fill;
 
-            FillHeatMap();
+            if (map.Equals("Mostrar Proyeccción de Datos"))
+            {
+
+            }else if (map.Equals("Mostrar Datos Históricos"))
+            {
+                FillHistoricHeatMap();
+            }
         }
 
-        private void FillHeatMap()
+        private void FillHistoricHeatMap()
         {
             var values = new Dictionary<String, double>();
             
@@ -127,10 +140,8 @@ namespace userInterface
                     }
                 }
                 average = this.databaseAdministrator.DataAverage(list);
-
                 values.Add(landIdentificator[department], average);
             }
-
             heatMap.HeatMap = values;
         }
     }
