@@ -87,6 +87,9 @@ namespace userInterface
             chart.Titles.Add($"Datos Históricos del Departamento de {this.department_ComboBox.SelectedItem}");
             this.chartContainer_panel.Controls.Add(chart);
 
+            ChartArea chA = new ChartArea("Default");
+            chart.ChartAreas.Add(chA);
+
             if (fullSize)
             {
                 chart.Dock = DockStyle.Fill;
@@ -96,52 +99,59 @@ namespace userInterface
                 chart.Size = new Size(this.chartContainer_panel.Width, this.chartContainer_panel.Height / 2);
             }
 
-            //chart.Series.Clear();
+            chart.Series.Clear();
+            chart.Legends.Clear();
+
+            chart.Legends.Add(new Legend("Legend"));
+            chart.Legends["Legend"].DockedToChartArea = "Default";
+            chart.Legends["Legend"].Docking = Docking.Left;
+
             for (int i = 0; i < variables.Count; i++)
             {
-                int year = 1;
-
                 Series series = new Series();
                 series.Name = variables[i];
                 series.ChartType = SeriesChartType.Column;
+                series.Legend = "Legend";
+                series.IsVisibleInLegend = true;
 
-                String url_2011 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/201{year} 01:00:00 a. m.' and '31/12/{year} 12:00:00 a. m.' &$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                String url_2011 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2011 01:00:00 a. m.' and '31/12/2011 12:00:00 a. m.' &$select=avg({DatabaseAdministrator.CONCENTRATION})";
                 String valueData_2011 = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2011));
-                series.Points.AddXY($"201{year}", valueData_2011);
-                year++;
+                series.Points.AddXY("2011", valueData_2011);
+                series.Label = valueData_2011;
 
-                String url_2012 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/201{year} 01:00:00 a. m.' and '31/12/201{year} 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                String url_2012 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2012 01:00:00 a. m.' and '31/12/2012 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
                 String valueData_2012 = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2012));
-                series.Points.AddXY($"201{year}", valueData_2012);
-                year++;
+                series.Points.AddXY("2012", valueData_2012);
+                series.Label = valueData_2012;
 
-                String url_2013 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/201{year} 01:00:00 a. m.' and '31/12/201{year} 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                String url_2013 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2013 01:00:00 a. m.' and '31/12/2013 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
                 String valueData_2013= databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2013));
-                series.Points.AddXY($"201{year}", valueData_2013);
-                year++;
+                series.Points.AddXY("2013", valueData_2013);
+                series.Label = valueData_2013;
 
-                String url_2014 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/201{year} 01:00:00 a. m.' and '31/12/201{year} 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                String url_2014 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2014 01:00:00 a. m.' and '31/12/2014 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
                 String valueData_2014 = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2014));
-                series.Points.AddXY($"201{year}", valueData_2014);
-                year++;
+                series.Points.AddXY("2014", valueData_2014);
+                series.Label = valueData_2014;
 
-                String url_2015 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/201{year} 01:00:00 a. m.' and '31/12/201{year} 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                String url_2015 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2015 01:00:00 a. m.' and '31/12/2015 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
                 String valueData_2015 = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2015));
-                series.Points.AddXY($"201{year}", valueData_2015);
-                year++;
+                series.Points.AddXY("2015", valueData_2015);
+                series.Label = valueData_2015;
 
-                String url_2016 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/201{year} 01:00:00 a. m.' and '31/12/201{year} 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                String url_2016 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2016 01:00:00 a. m.' and '31/12/2016 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
                 String valueData_2016 = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2016));
-                series.Points.AddXY($"201{year}", valueData_2016);
-                year++;
+                series.Points.AddXY("2016", valueData_2016);
+                series.Label = valueData_2016;
 
-                String url_2017 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/201{year} 01:00:00 a. m.' and '31/12/201{year} 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                String url_2017 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2017 01:00:00 a. m.' and '31/12/2017 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
                 String valueData_2017 = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2017));
-                series.Points.AddXY($"201{year}", valueData_2017);
-
+                series.Points.AddXY("2017", valueData_2017);
+                series.Label = valueData_2017;
 
                 chart.Series.Add(series);
             }
+            chart.Show();
         }
 
         private void CreateOnlyProjectedData(bool fullSize)
