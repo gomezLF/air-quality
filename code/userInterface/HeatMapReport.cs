@@ -129,13 +129,12 @@ namespace userInterface
 
                 foreach (String variable in databaseAdministrator.variable)
                 {
-                    String url = DatabaseAdministrator.URL + $"?departamento={department}&variable={variable}&$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                    String valueData = databaseAdministrator.GetPieValue(databaseAdministrator.ConsultData(url));
+                    String url = DatabaseAdministrator.URL + $"?departamento={department}&variable={variable}";
+                    String valueData = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url));
 
                     if (!valueData.Equals(""))
                     {
                         double value = double.Parse(valueData, CultureInfo.InvariantCulture);
-
                         list.Add(value);
                     }
                 }

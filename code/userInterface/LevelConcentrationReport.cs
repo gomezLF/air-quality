@@ -61,7 +61,7 @@ namespace userInterface
                 foreach (var variable in this.databaseAdministrator.variable)
                 {
                     String url = DatabaseAdministrator.URL + $"?departamento={cbDepartments.SelectedItem}&variable={variable}&$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                    string theValue = this.databaseAdministrator.GetPieValue(this.databaseAdministrator.ConsultData(url));
+                    string theValue = this.databaseAdministrator.GetChartValue(this.databaseAdministrator.ConsultData(url));
 
                     pieChart1.Series["s1"].Points.AddXY(variable, theValue);
                 }
