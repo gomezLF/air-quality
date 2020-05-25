@@ -1,4 +1,6 @@
 ﻿using model;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -9,13 +11,25 @@ namespace userInterface
     {
 
         private DatabaseAdministrator databaseAdministrator;
+        private List<String> variables;
 
         public StudyPlaceReport(DatabaseAdministrator databaseAdministrator)
         {
             InitializeComponent();
             this.databaseAdministrator = databaseAdministrator;
+            this.variables = new List<String>();
 
             this.department_ComboBox.DataSource = this.databaseAdministrator.department;
+            ChooseVariables();
+        }
+
+        private void ChooseVariables()
+        {
+            this.variables.Add("Temperatura");
+            this.variables.Add("Temperatura a 10 m");
+            this.variables.Add("Temperatura a 2 m");
+            this.variables.Add("Radiación Solar Global");
+            this.variables.Add("Radiación UVB");
         }
 
         private void DisplayOptions_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -79,10 +93,13 @@ namespace userInterface
             } else
             {
                 chart.Dock = DockStyle.Bottom;
-                chart.Size = new Size(this.chartContainer_panel.Width, 263);
+                chart.Size = new Size(this.chartContainer_panel.Width, this.chartContainer_panel.Height / 2);
             }
 
+            foreach (String variable in this.variables)
+            {
 
+            }
         }
 
         private void CreateOnlyProjectedData(bool fullSize)
@@ -98,8 +115,10 @@ namespace userInterface
             else
             {
                 chart.Dock = DockStyle.Top;
-                chart.Size = new Size(this.chartContainer_panel.Width, 263);
+                chart.Size = new Size(this.chartContainer_panel.Width, this.chartContainer_panel.Height / 2);
             }
+
+            
         }
     }
 }
