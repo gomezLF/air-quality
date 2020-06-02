@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.selectionData_panel = new System.Windows.Forms.Panel();
+            this.btReturnMainMenu = new System.Windows.Forms.Button();
             this.availableData_listBox = new System.Windows.Forms.ListBox();
             this.showData = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,12 +46,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.filter_button = new System.Windows.Forms.Button();
             this.description_tooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.btReturnMainMenu = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.selectionData_panel.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            this.dataViewer.SuspendLayout();
             this.filter_panel.SuspendLayout();
             this.paging_panel.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // selectionData_panel
@@ -69,23 +72,22 @@
             this.selectionData_panel.Size = new System.Drawing.Size(200, 561);
             this.selectionData_panel.TabIndex = 2;
             // 
+            // btReturnMainMenu
+            // 
+            this.btReturnMainMenu.Location = new System.Drawing.Point(11, 488);
+            this.btReturnMainMenu.Name = "btReturnMainMenu";
+            this.btReturnMainMenu.Size = new System.Drawing.Size(169, 31);
+            this.btReturnMainMenu.TabIndex = 8;
+            this.btReturnMainMenu.Text = "Regresar al Menú Principal";
+            this.btReturnMainMenu.UseVisualStyleBackColor = true;
+            this.btReturnMainMenu.Click += new System.EventHandler(this.btReturnMainMenu_Click);
+            // 
             // availableData_listBox
             // 
             this.availableData_listBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.availableData_listBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.availableData_listBox.FormattingEnabled = true;
-            this.availableData_listBox.Items.AddRange(new object[] {
-            "Autoridad Ambiental",
-            "Concentración",
-            "Departamento",
-            "Fecha",
-            "Nombre de la Estación",
-            "Nombre del Municipio",
-            "Tecnología",
-            "Tiempo de Exposición",
-            "Tipo de Estación",
-            "Unidades",
-            "Variable"});
+            this.availableData_listBox.Items.AddRange(new object[] {"Autoridad Ambiental", "Concentración", "Departamento", "Fecha", "Nombre de la Estación", "Nombre del Municipio", "Tecnología", "Tiempo de Exposición", "Tipo de Estación", "Unidades", "Variable"});
             this.availableData_listBox.Location = new System.Drawing.Point(11, 62);
             this.availableData_listBox.Name = "availableData_listBox";
             this.availableData_listBox.Size = new System.Drawing.Size(169, 247);
@@ -99,7 +101,7 @@
             this.showData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showData.FlatAppearance.BorderSize = 0;
             this.showData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showData.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showData.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.showData.Location = new System.Drawing.Point(45, 359);
             this.showData.Name = "showData";
             this.showData.Size = new System.Drawing.Size(104, 26);
@@ -129,7 +131,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(-1, 0);
             this.label1.Name = "label1";
@@ -154,6 +156,7 @@
             // 
             // dataViewer
             // 
+            this.dataViewer.Controls.Add(this.dataGridView1);
             this.dataViewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataViewer.Location = new System.Drawing.Point(0, 30);
             this.dataViewer.Name = "dataViewer";
@@ -197,7 +200,7 @@
             this.next_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.next_button.FlatAppearance.BorderSize = 2;
             this.next_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.next_button.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.next_button.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.next_button.Location = new System.Drawing.Point(447, 10);
             this.next_button.Margin = new System.Windows.Forms.Padding(23);
             this.next_button.Name = "next_button";
@@ -213,7 +216,7 @@
             this.previous_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.previous_button.FlatAppearance.BorderSize = 2;
             this.previous_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.previous_button.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.previous_button.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.previous_button.Location = new System.Drawing.Point(60, 10);
             this.previous_button.Margin = new System.Windows.Forms.Padding(23);
             this.previous_button.Name = "previous_button";
@@ -241,7 +244,7 @@
             this.filter_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.filter_button.FlatAppearance.BorderSize = 0;
             this.filter_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filter_button.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filter_button.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.filter_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.filter_button.Location = new System.Drawing.Point(771, 0);
             this.filter_button.Name = "filter_button";
@@ -252,15 +255,14 @@
             this.filter_button.UseVisualStyleBackColor = false;
             this.filter_button.Click += new System.EventHandler(this.Filter_button_Click);
             // 
-            // btReturnMainMenu
+            // dataGridView1
             // 
-            this.btReturnMainMenu.Location = new System.Drawing.Point(11, 488);
-            this.btReturnMainMenu.Name = "btReturnMainMenu";
-            this.btReturnMainMenu.Size = new System.Drawing.Size(169, 31);
-            this.btReturnMainMenu.TabIndex = 8;
-            this.btReturnMainMenu.Text = "Regresar al Menú Principal";
-            this.btReturnMainMenu.UseVisualStyleBackColor = true;
-            this.btReturnMainMenu.Click += new System.EventHandler(this.btReturnMainMenu_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(614, 480);
+            this.dataGridView1.TabIndex = 0;
             // 
             // FilterTableReport
             // 
@@ -274,32 +276,34 @@
             this.selectionData_panel.ResumeLayout(false);
             this.selectionData_panel.PerformLayout();
             this.mainPanel.ResumeLayout(false);
+            this.dataViewer.ResumeLayout(false);
             this.filter_panel.ResumeLayout(false);
             this.paging_panel.ResumeLayout(false);
             this.paging_panel.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel selectionData_panel;
-        private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ToolTip description_tooltip;
-        private System.Windows.Forms.Panel paging_panel;
-        private System.Windows.Forms.Button next_button;
-        private System.Windows.Forms.Button previous_button;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button filter_button;
-        private System.Windows.Forms.Panel filter_panel;
-        private System.Windows.Forms.Button showData;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FlowLayoutPanel filterOption_panel;
-        private System.Windows.Forms.Panel dataViewer;
         private System.Windows.Forms.ListBox availableData_listBox;
         private System.Windows.Forms.Button btReturnMainMenu;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel dataViewer;
+        private System.Windows.Forms.ToolTip description_tooltip;
+        private System.Windows.Forms.Button filter_button;
+        private System.Windows.Forms.Panel filter_panel;
+        private System.Windows.Forms.FlowLayoutPanel filterOption_panel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Button next_button;
+        private System.Windows.Forms.Panel paging_panel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button previous_button;
+        private System.Windows.Forms.Panel selectionData_panel;
+        private System.Windows.Forms.Button showData;
+
+        #endregion
     }
 }

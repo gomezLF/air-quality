@@ -80,7 +80,6 @@ namespace userInterface
                     filterOption = DatabaseAdministrator.VARIABLE;
                     break;
             }
-
             return filterOption;
         }
 

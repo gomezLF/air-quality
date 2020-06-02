@@ -91,7 +91,9 @@ namespace model
         public String GetChartValue(String valueInData)
         {
             String chartValue = "";
-
+            
+            Console.WriteLine(valueInData);
+            
             if (valueInData.ElementAt(3).Equals('a'))
             {
                 String[] result = valueInData.Split(':');

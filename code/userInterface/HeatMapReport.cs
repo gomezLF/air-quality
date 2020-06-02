@@ -63,6 +63,7 @@ namespace userInterface
             {
                 MessageBox.Show("Para generar el mapa de calor, seleccione una de las dos opciones previamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            
         }
 
         private void ReturnMainMenu_Click(object sender, EventArgs e)
@@ -129,7 +130,7 @@ namespace userInterface
 
                 foreach (String variable in databaseAdministrator.variable)
                 {
-                    String url = DatabaseAdministrator.URL + $"?departamento={department}&variable={variable}";
+                    String url = DatabaseAdministrator.URL + $"?departamento={department}&variable={variable}&$select=avg({DatabaseAdministrator.CONCENTRATION})";
                     String valueData = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url));
 
                     if (!valueData.Equals(""))
