@@ -52,9 +52,9 @@ namespace model
 
         private List<Double> Squared(List<Double> Variables) {
             List<Double> sn = new List<double>();
-            for (int i = 0; i < Variables.Count - 1; i++)
+            for (int i = 0; i < Variables.Count ; i++)
             {
-                sn[i] = Variables[i] * Variables[i];
+                sn.Insert(i, Variables[i] * Variables[i]);
             }
             return sn;
         }
@@ -62,9 +62,9 @@ namespace model
         private List<Double> Multuply(List<Double> x, List<Double> y)
         {
             List<Double> multiply = new List<double>();
-            for (int i = 0; i < x.Count-1; i++)
+            for (int i = 0; i < x.Count; i++)
             {
-                multiply[i] = x[i] * y[i];
+                multiply.Insert(i, x[i] * y[i]);
             }
             return multiply;
         }

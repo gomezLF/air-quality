@@ -169,6 +169,8 @@ namespace userInterface
             years.Insert(5, 2016);
             years.Insert(6, 2017);
             
+            Console.WriteLine(years[0]);
+            
             foreach (String department in databaseAdministrator.department)
             {
                 Algorithms algorithms = new Algorithms();

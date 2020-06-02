@@ -81,7 +81,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label3.Location = new System.Drawing.Point(93, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 14);
@@ -103,10 +103,7 @@
             this.displayOptions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.displayOptions.CheckOnClick = true;
             this.displayOptions.FormattingEnabled = true;
-            this.displayOptions.Items.AddRange(new object[] {
-            "Solo Datos Proyectados",
-            "Solo Datos Históricos",
-            "Comparar Datos Históricos con Datos Proyectados"});
+            this.displayOptions.Items.AddRange(new object[] {"Solo Datos Proyectados", "Solo Datos Históricos", "Comparar Datos Históricos con Datos Proyectados"});
             this.displayOptions.Location = new System.Drawing.Point(477, 18);
             this.displayOptions.Name = "displayOptions";
             this.displayOptions.Size = new System.Drawing.Size(270, 60);
@@ -126,7 +123,7 @@
             // 
             // btReturnToMainMenu
             // 
-            this.btReturnToMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btReturnToMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btReturnToMainMenu.Location = new System.Drawing.Point(368, 3);
             this.btReturnToMainMenu.Name = "btReturnToMainMenu";
             this.btReturnToMainMenu.Size = new System.Drawing.Size(189, 31);
@@ -160,19 +157,18 @@
             this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button showInformation_button;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox department_ComboBox;
-        private System.Windows.Forms.CheckedListBox displayOptions;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btReturnToMainMenu;
         private System.Windows.Forms.Panel chartContainer_panel;
+        private System.Windows.Forms.ComboBox department_ComboBox;
+        private System.Windows.Forms.CheckedListBox displayOptions;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button showInformation_button;
+
+        #endregion
     }
 }
