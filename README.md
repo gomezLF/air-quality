@@ -72,3 +72,7 @@ Esta entrega consiste en el refinamiento de las entregas anteriores, diagrama de
 ### Entrega final
 
 Para la última entrega los entregables son refinamiento de las entregas anterioires y un algortimo de análiisis de la información
+
+### 1. Refinamiento entrgas anteriores
+
+[Entregas anteriores](https://github.com/gomezLF/air-quality/tree/develop/docs/final-delivery)
