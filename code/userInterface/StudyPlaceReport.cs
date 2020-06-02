@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -10,36 +11,48 @@ namespace userInterface
     public partial class StudyPlaceReport : Form
     {
 
-        private DatabaseAdministrator databaseAdministrator;
-        private List<String> variables;
+        private readonly DatabaseAdministrator databaseAdministrator;
+        private readonly List<string> variables;
 
         public StudyPlaceReport(DatabaseAdministrator databaseAdministrator)
         {
             InitializeComponent();
             this.databaseAdministrator = databaseAdministrator;
-            this.variables = new List<String>();
+            variables = new List<string>();
 
-            this.department_ComboBox.DataSource = this.databaseAdministrator.department;
+            department_ComboBox.DataSource = this.databaseAdministrator.department;
             ChooseVariables();
+            FillYearComboBox();
         }
 
         private void ChooseVariables()
         {
-            this.variables.Add("Temperatura");
-            this.variables.Add("Temperatura a 10 m");
-            this.variables.Add("Temperatura a 2 m");
-            this.variables.Add("Radiación Solar Global");
-            this.variables.Add("Radiación UVB");
+            variables.Add("Temperatura");
+            variables.Add("Temperatura a 10 m");
+            variables.Add("Temperatura a 2 m");
+            variables.Add("Radiación Solar Global");
+            variables.Add("Radiación UVB");
         }
 
-        private void DisplayOptions_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void FillYearComboBox()
         {
-            for (int i = 0; i < displayOptions.Items.Count; i++)
+            year_CB.Items.Add("2011");
+            year_CB.Items.Add("2012");
+            year_CB.Items.Add("2013");
+            year_CB.Items.Add("2014");
+            year_CB.Items.Add("2015");
+            year_CB.Items.Add("2016");
+            year_CB.Items.Add("2017");
+        }
+
+        private void DisplayOptions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            for (var i = 0; i < displayOptions.Items.Count; i++)
             {
                 displayOptions.SetItemChecked(i, false);
             }
 
-            int index = displayOptions.SelectedIndex;
+            var index = displayOptions.SelectedIndex;
 
             if (index != -1)
             {
@@ -47,13 +60,13 @@ namespace userInterface
             }
         }
 
-        private void ShowInformation_button_Click(object sender, System.EventArgs e)
+        private void ShowInformation_button_Click(object sender, EventArgs e)
         {
-            if (this.department_ComboBox.SelectedItem != null && this.displayOptions.CheckedItems.Count == 1)
+            if (department_ComboBox.SelectedItem != null && displayOptions.CheckedItems.Count == 1 && year_CB.SelectedItem != null)
             {
-                this.chartContainer_panel.Controls.Clear();
+                chartContainer_panel.Controls.Clear();
 
-                switch (this.displayOptions.CheckedItems[0].ToString())
+                switch (displayOptions.CheckedItems[0].ToString())
                 {
                     case "Solo Datos Proyectados":
                         CreateOnlyProjectedData(true);
@@ -73,21 +86,20 @@ namespace userInterface
             }
         }
 
-        private void btReturnToMainMenu_Click(object sender, System.EventArgs e)
+        private void btReturnToMainMenu_Click(object sender, EventArgs e)
         {
-            MainMenu mainMenu = new MainMenu();
-            mainMenu.DatabaseAdministrator = this.databaseAdministrator;
+            var mainMenu = new MainMenu {DatabaseAdministrator = databaseAdministrator};
             mainMenu.Show();
-            this.Close();
+            Close();
         }
 
         private void CreateOnlyHistoricData(bool fullSize)
         {
-            Chart chart = new Chart();
-            chart.Titles.Add($"Datos Históricos del Departamento de {this.department_ComboBox.SelectedItem}");
-            this.chartContainer_panel.Controls.Add(chart);
+            var chart = new Chart();
+            chart.Titles.Add($"Datos Históricos del Departamento de {department_ComboBox.SelectedItem}");
+            chartContainer_panel.Controls.Add(chart);
 
-            ChartArea chA = new ChartArea("Default");
+            var chA = new ChartArea("Default");
             chart.ChartAreas.Add(chA);
 
             if (fullSize)
@@ -96,7 +108,7 @@ namespace userInterface
             } else
             {
                 chart.Dock = DockStyle.Bottom;
-                chart.Size = new Size(this.chartContainer_panel.Width, this.chartContainer_panel.Height / 2);
+                chart.Size = new Size(chartContainer_panel.Width, chartContainer_panel.Height / 2);
             }
 
             chart.Series.Clear();
@@ -106,49 +118,28 @@ namespace userInterface
             chart.Legends["Legend"].DockedToChartArea = "Default";
             chart.Legends["Legend"].Docking = Docking.Left;
 
-            for (int i = 0; i < variables.Count; i++)
+            foreach (var t in variables)
             {
-                Series series = new Series();
-                series.Name = variables[i];
-                series.ChartType = SeriesChartType.Column;
-                series.Legend = "Legend";
-                series.IsVisibleInLegend = true;
+                var series = new Series
+                {
+                    Name = t,
+                    ChartType = SeriesChartType.Column,
+                    Legend = "Legend",
+                    IsVisibleInLegend = true
+                };
 
-                String url_2011 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2011 01:00:00 a. m.' and '31/12/2011 12:00:00 a. m.' &$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                String valueData_2011 = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2011));
-                series.Points.AddXY("2011", valueData_2011);
-                series.Label = valueData_2011;
-
-                String url_2012 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2012 01:00:00 a. m.' and '31/12/2012 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                String valueData_2012 = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2012));
-                series.Points.AddXY("2012", valueData_2012);
-                series.Label = valueData_2012;
-
-                String url_2013 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2013 01:00:00 a. m.' and '31/12/2013 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                String valueData_2013= databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2013));
-                series.Points.AddXY("2013", valueData_2013);
-                series.Label = valueData_2013;
-
-                String url_2014 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2014 01:00:00 a. m.' and '31/12/2014 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                String valueData_2014 = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2014));
-                series.Points.AddXY("2014", valueData_2014);
-                series.Label = valueData_2014;
-
-                String url_2015 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2015 01:00:00 a. m.' and '31/12/2015 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                String valueData_2015 = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2015));
-                series.Points.AddXY("2015", valueData_2015);
-                series.Label = valueData_2015;
-
-                String url_2016 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2016 01:00:00 a. m.' and '31/12/2016 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                String valueData_2016 = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2016));
-                series.Points.AddXY("2016", valueData_2016);
-                series.Label = valueData_2016;
-
-                String url_2017 = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={this.department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={variables[i]}&$where={DatabaseAdministrator.DATE} between '01/01/2017 01:00:00 a. m.' and '31/12/2017 12:00:00 a. m.'&$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                String valueData_2017 = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url_2017));
-                series.Points.AddXY("2017", valueData_2017);
-                series.Label = valueData_2017;
-
+                var url = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={t}&$where={DatabaseAdministrator.DATE} between '01/01/{year_CB.SelectedItem} 01:00:00 a. m.' and '31/12/{year_CB.SelectedItem} 12:00:00 a. m.' &$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                Console.WriteLine(databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url)));
+                var valueData = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url));
+                double value = 0;
+                
+                if (!valueData.Equals(""))
+                {
+                    value = double.Parse(valueData, CultureInfo.InvariantCulture);
+                }
+                
+                series.Points.AddXY($"{year_CB.SelectedItem}", value.ToString("N2"));
+                series.Label = value.ToString("N2");
                 chart.Series.Add(series);
             }
             chart.Show();
@@ -156,10 +147,12 @@ namespace userInterface
 
         private void CreateOnlyProjectedData(bool fullSize)
         {
-            Chart chart = new Chart();
-            chart.Titles.Add($"Datos Proyectados del Departamento de {this.department_ComboBox.SelectedItem}");
-            chart.Series[0].ChartType = SeriesChartType.Column;
-            this.chartContainer_panel.Controls.Add(chart);
+            var chart = new Chart();
+            chart.Titles.Add($"Datos Proyectados del Departamento de {department_ComboBox.SelectedItem}");
+            chartContainer_panel.Controls.Add(chart);
+
+            var chA = new ChartArea("Default");
+            chart.ChartAreas.Add(chA);
 
             if (fullSize)
             {
@@ -168,8 +161,57 @@ namespace userInterface
             else
             {
                 chart.Dock = DockStyle.Top;
-                chart.Size = new Size(this.chartContainer_panel.Width, this.chartContainer_panel.Height / 2);
+                chart.Size = new Size(chartContainer_panel.Width, chartContainer_panel.Height / 2);
             }
+            
+            chart.Series.Clear();
+            chart.Legends.Clear();
+
+            chart.Legends.Add(new Legend("Legend"));
+            chart.Legends["Legend"].DockedToChartArea = "Default";
+            chart.Legends["Legend"].Docking = Docking.Left;
+            
+            var concentration = new List<double>();
+            var years = new List<double>();
+            years.Insert(0, 2011);
+            years.Insert(1, 2012);
+            years.Insert(2, 2013);
+            years.Insert(3, 2014);
+            years.Insert(4, 2015);
+            years.Insert(5, 2016);
+            years.Insert(6, 2017);
+            
+            foreach (var t in variables)
+            {
+                var algorithm = new Algorithms();
+                var series = new Series
+                {
+                    Name = t,
+                    ChartType = SeriesChartType.Column,
+                    Legend = "Legend",
+                    IsVisibleInLegend = true
+                };
+                
+                for (var i = 0; i <= 7; i++)
+                {
+                    var url = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={department_ComboBox.SelectedItem}&{DatabaseAdministrator.VARIABLE}={t}&$where={DatabaseAdministrator.DATE} between '01/01/201{i+1} 01:00:00 a. m.' and '31/12/201{i+1} 12:00:00 a. m.' &$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                    Console.WriteLine(databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url)));
+                    var valueData = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url));
+                    
+                    if (!valueData.Equals(""))
+                    {
+                        var value = double.Parse(valueData, CultureInfo.InvariantCulture);
+                        concentration.Insert(i, value);
+                    }
+                }
+                algorithm.Coefficients(years, concentration, department_ComboBox.SelectedItem.ToString());
+
+                var valueP = algorithm.LinearRegresion(Algorithms.PROJECTED_DATA);
+                series.Points.AddXY($"{year_CB.SelectedItem}", valueP.ToString("N2"));
+                series.Label = valueP.ToString("N2");
+                chart.Series.Add(series);
+            }
+            chart.Show();
         }
     }
 }

@@ -4,6 +4,7 @@ using model;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Media;
@@ -58,12 +59,18 @@ namespace userInterface
                 pieChart1.Titles.Add($"Niveles de Concentración en {cbDepartments.SelectedItem}");
                 pieChart1.Series["s1"].IsValueShownAsLabel = true;
 
-                foreach (var variable in this.databaseAdministrator.variable)
+                foreach (var variable in databaseAdministrator.variable)
                 {
-                    String url = DatabaseAdministrator.URL + $"?departamento={cbDepartments.SelectedItem}&variable={variable}&$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                    string theValue = this.databaseAdministrator.GetChartValue(this.databaseAdministrator.ConsultData(url));
-
-                    pieChart1.Series["s1"].Points.AddXY(variable, theValue);
+                    var url = DatabaseAdministrator.URL + $"?departamento={cbDepartments.SelectedItem}&variable={variable}&$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                    var valueData = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url));
+                    var value = 0.0;
+                    
+                    if (!valueData.Equals(""))
+                    {
+                        value = double.Parse(valueData, CultureInfo.InvariantCulture);
+                    }
+                    
+                    pieChart1.Series["s1"].Points.AddXY(variable, value.ToString("N2"));
                 }
 
             }else

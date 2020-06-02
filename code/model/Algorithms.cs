@@ -8,6 +8,8 @@ namespace model
 {
     public class Algorithms
     {
+        public const int PROJECTED_DATA = 2023;
+        
         private Double a;
         private Double b;
 

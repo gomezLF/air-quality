@@ -10,7 +10,6 @@ namespace userInterface
 {
     public partial class HeatMapReport : Form
     {
-        private const int PROJECTED_DATA = 2023;
         
         private DatabaseAdministrator databaseAdministrator;
         private GeoMap heatMap;
@@ -169,25 +168,23 @@ namespace userInterface
             years.Insert(5, 2016);
             years.Insert(6, 2017);
             
-            Console.WriteLine(years[0]);
-            
-            foreach (String department in databaseAdministrator.department)
+            foreach (var department in databaseAdministrator.department)
             {
                 Algorithms algorithms = new Algorithms();
                 
-                for (int i = 0; i < 7; i++)
+                for (var i = 0; i < 7; i++)
                 {
-                    String url = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={department}&{DatabaseAdministrator.VARIABLE}={this.variable_CB.SelectedItem}&$where={DatabaseAdministrator.DATE} between '01/01/201{i+1} 01:00:00 a. m.' and '31/12/201{i+1} 12:00:00 a. m.' &$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                    String valueData = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url));
+                    var url = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={department}&{DatabaseAdministrator.VARIABLE}={variable_CB.SelectedItem}&$where={DatabaseAdministrator.DATE} between '01/01/201{i+1} 01:00:00 a. m.' and '31/12/201{i+1} 12:00:00 a. m.' &$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                    var valueData = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url));
                     
                     if (!valueData.Equals(""))
                     {
-                        double value = double.Parse(valueData, CultureInfo.InvariantCulture);
+                        var value = double.Parse(valueData, CultureInfo.InvariantCulture);
                         concentration.Insert(i, value);
                     }
                 }
                 algorithms.Coefficients(years, concentration, department);
-                values.Add(landIdentificator[department], algorithms.LinearRegresion(PROJECTED_DATA));
+                values.Add(landIdentificator[department], algorithms.LinearRegresion(Algorithms.PROJECTED_DATA));
             }
             heatMap.HeatMap = values;
         }

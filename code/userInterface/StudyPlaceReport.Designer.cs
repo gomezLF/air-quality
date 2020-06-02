@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.year_CB = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.showInformation_button = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +48,8 @@
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.year_CB);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.showInformation_button);
             this.panel1.Controls.Add(this.label3);
@@ -57,10 +61,29 @@
             this.panel1.Size = new System.Drawing.Size(882, 89);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label1.Location = new System.Drawing.Point(354, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 14);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Seleccione un año";
+            // 
+            // year_CB
+            // 
+            this.year_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.year_CB.FormattingEnabled = true;
+            this.year_CB.Location = new System.Drawing.Point(354, 24);
+            this.year_CB.Name = "year_CB";
+            this.year_CB.Size = new System.Drawing.Size(121, 21);
+            this.year_CB.TabIndex = 5;
+            // 
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(398, 0);
+            this.label4.Location = new System.Drawing.Point(536, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(2, 85);
             this.label4.TabIndex = 4;
@@ -70,7 +93,7 @@
             // 
             this.showInformation_button.AutoSize = true;
             this.showInformation_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showInformation_button.Location = new System.Drawing.Point(96, 55);
+            this.showInformation_button.Location = new System.Drawing.Point(201, 59);
             this.showInformation_button.Name = "showInformation_button";
             this.showInformation_button.Size = new System.Drawing.Size(157, 23);
             this.showInformation_button.TabIndex = 3;
@@ -82,7 +105,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label3.Location = new System.Drawing.Point(93, 7);
+            this.label3.Location = new System.Drawing.Point(45, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 14);
             this.label3.TabIndex = 2;
@@ -92,7 +115,7 @@
             // 
             this.department_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.department_ComboBox.FormattingEnabled = true;
-            this.department_ComboBox.Location = new System.Drawing.Point(56, 24);
+            this.department_ComboBox.Location = new System.Drawing.Point(10, 24);
             this.department_ComboBox.Name = "department_ComboBox";
             this.department_ComboBox.Size = new System.Drawing.Size(231, 21);
             this.department_ComboBox.TabIndex = 1;
@@ -104,7 +127,7 @@
             this.displayOptions.CheckOnClick = true;
             this.displayOptions.FormattingEnabled = true;
             this.displayOptions.Items.AddRange(new object[] {"Solo Datos Proyectados", "Solo Datos Históricos", "Comparar Datos Históricos con Datos Proyectados"});
-            this.displayOptions.Location = new System.Drawing.Point(477, 18);
+            this.displayOptions.Location = new System.Drawing.Point(555, 18);
             this.displayOptions.Name = "displayOptions";
             this.displayOptions.Size = new System.Drawing.Size(270, 60);
             this.displayOptions.TabIndex = 0;
@@ -130,6 +153,7 @@
             this.btReturnToMainMenu.TabIndex = 0;
             this.btReturnToMainMenu.Text = "Regresar al Menú Principal";
             this.btReturnToMainMenu.UseVisualStyleBackColor = true;
+            this.btReturnToMainMenu.Click += new System.EventHandler(this.btReturnToMainMenu_Click);
             // 
             // chartContainer_panel
             // 
@@ -163,11 +187,13 @@
         private System.Windows.Forms.Panel chartContainer_panel;
         private System.Windows.Forms.ComboBox department_ComboBox;
         private System.Windows.Forms.CheckedListBox displayOptions;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button showInformation_button;
+        private System.Windows.Forms.ComboBox year_CB;
 
         #endregion
     }
