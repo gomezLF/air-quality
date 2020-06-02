@@ -53,7 +53,7 @@ Enlace [vídeo](https://github.com/gomezLF/air-quality/blob/develop/docs/deliver
 
 ---
 
-### Tercaera entrega
+### Tercera entrega
 
 Esta entrega consiste en el refinamiento de las entregas anteriores, diagrama de secuencia de las 3 operaciones básicas de la aplicación, implementación de reportes y el vídeo explicativo
 
