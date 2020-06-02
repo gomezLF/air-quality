@@ -10,15 +10,19 @@ namespace userInterface
 {
     public partial class HeatMapReport : Form
     {
+        private const int PROJECTED_DATA = 2023;
+        
         private DatabaseAdministrator databaseAdministrator;
         private GeoMap heatMap;
         private Dictionary<String, String> landIdentificator;
+        private List<String> variables;
 
         public HeatMapReport(DatabaseAdministrator databaseAdministrator)
         {
             InitializeComponent();
             FillLandidentificator();
-
+            FillVariables();
+            
             this.heatMap = new GeoMap();
             heatMap.LandClick += HeatMap_LandClick;
 
@@ -55,13 +59,14 @@ namespace userInterface
 
         private void ShowMap_Click(object sender, EventArgs e)
         {
-            if (dataSelector.CheckedItems.Count == 1)
+            if (dataSelector.CheckedItems.Count == 1 && this.variable_CB.SelectedItem != null)
             {
+                this.mapGenerator.Controls.Clear();
                 PrintHeatMap(dataSelector.SelectedItem.ToString());
             }
             else
             {
-                MessageBox.Show("Para generar el mapa de calor, seleccione una de las dos opciones previamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Para generar el mapa de calor, seleccione los campos de proyeccción o histórico y una variable", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
@@ -73,6 +78,19 @@ namespace userInterface
             mainMenu.Show();
 
             this.Close();
+        }
+
+        private void FillVariables()
+        {
+            this.variables = new List<string>();
+            
+            this.variables.Add("CO");
+            this.variables.Add("NO2");
+            this.variables.Add("PM10");
+            this.variables.Add("PM2.5");
+            this.variables.Add("SO2");
+
+            this.variable_CB.DataSource = this.variables;
         }
 
         private void FillLandidentificator()
@@ -112,7 +130,7 @@ namespace userInterface
 
             if (map.Equals("Mostrar Proyeccción de Datos"))
             {
-
+                FillProjectedHeapMap();
             }else if (map.Equals("Mostrar Datos Históricos"))
             {
                 FillHistoricHeatMap();
@@ -125,22 +143,49 @@ namespace userInterface
             
             foreach (String department in databaseAdministrator.department)
             {
-                double average = 0.0;
-                List<double> list = new List<double>();
+                String url = DatabaseAdministrator.URL + $"?departamento={department}&variable={variable_CB.SelectedItem}&$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                String valueData = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url));
 
-                foreach (String variable in databaseAdministrator.variable)
+                if (!valueData.Equals(""))
                 {
-                    String url = DatabaseAdministrator.URL + $"?departamento={department}&variable={variable}&$select=avg({DatabaseAdministrator.CONCENTRATION})";
-                    String valueData = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url));
+                    double value = double.Parse(valueData, CultureInfo.InvariantCulture);
+                    values.Add(landIdentificator[department], value);
+                }
+            }
+            heatMap.HeatMap = values;
+        }
 
+        private void FillProjectedHeapMap()
+        {
+            var values = new Dictionary<String, double>();
+            var concentration = new List<Double>();
+            
+            var years = new List<Double>();
+            years.Insert(0, 2011);
+            years.Insert(1, 2012);
+            years.Insert(2, 2013);
+            years.Insert(3, 2014);
+            years.Insert(4, 2015);
+            years.Insert(5, 2016);
+            years.Insert(6, 2017);
+            
+            foreach (String department in databaseAdministrator.department)
+            {
+                Algorithms algorithms = new Algorithms();
+                
+                for (int i = 0; i < 7; i++)
+                {
+                    String url = $"{DatabaseAdministrator.URL}?{DatabaseAdministrator.DEPARTMENT}={department}&{DatabaseAdministrator.VARIABLE}={this.variable_CB.SelectedItem}&$where={DatabaseAdministrator.DATE} between '01/01/201{i+1} 01:00:00 a. m.' and '31/12/201{i+1} 12:00:00 a. m.' &$select=avg({DatabaseAdministrator.CONCENTRATION})";
+                    String valueData = databaseAdministrator.GetChartValue(databaseAdministrator.ConsultData(url));
+                    
                     if (!valueData.Equals(""))
                     {
                         double value = double.Parse(valueData, CultureInfo.InvariantCulture);
-                        list.Add(value);
+                        concentration.Insert(i, value);
                     }
                 }
-                average = this.databaseAdministrator.DataAverage(list);
-                values.Add(landIdentificator[department], average);
+                algorithms.Coefficients(years, concentration, department);
+                values.Add(landIdentificator[department], algorithms.LinearRegresion(PROJECTED_DATA));
             }
             heatMap.HeatMap = values;
         }

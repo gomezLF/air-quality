@@ -29,20 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.contamination_txtBox = new System.Windows.Forms.TextBox();
+            this.department_txtBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.variable_CB = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataSelector = new System.Windows.Forms.CheckedListBox();
             this.mapGenerator = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.department_txtBox = new System.Windows.Forms.TextBox();
-            this.contamination_txtBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,13 +58,61 @@
             this.panel1.Size = new System.Drawing.Size(265, 503);
             this.panel1.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.contamination_txtBox);
+            this.panel2.Controls.Add(this.department_txtBox);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(10, 271);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(243, 158);
+            this.panel2.TabIndex = 6;
+            // 
+            // contamination_txtBox
+            // 
+            this.contamination_txtBox.Location = new System.Drawing.Point(6, 119);
+            this.contamination_txtBox.Name = "contamination_txtBox";
+            this.contamination_txtBox.ReadOnly = true;
+            this.contamination_txtBox.Size = new System.Drawing.Size(162, 20);
+            this.contamination_txtBox.TabIndex = 3;
+            // 
+            // department_txtBox
+            // 
+            this.department_txtBox.Location = new System.Drawing.Point(6, 40);
+            this.department_txtBox.Name = "department_txtBox";
+            this.department_txtBox.ReadOnly = true;
+            this.department_txtBox.Size = new System.Drawing.Size(162, 20);
+            this.department_txtBox.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label3.Location = new System.Drawing.Point(3, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(159, 15);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nivel de Contaminación";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label2.Location = new System.Drawing.Point(3, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Departamento";
+            // 
             // button2
             // 
             this.button2.AutoSize = true;
             this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button2.Location = new System.Drawing.Point(56, 466);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(170, 25);
@@ -74,6 +124,8 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.variable_CB);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.dataSelector);
@@ -82,14 +134,32 @@
             this.panel3.Size = new System.Drawing.Size(243, 212);
             this.panel3.TabIndex = 1;
             // 
+            // label4
+            // 
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Location = new System.Drawing.Point(14, 151);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 2);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "label4";
+            // 
+            // variable_CB
+            // 
+            this.variable_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.variable_CB.FormattingEnabled = true;
+            this.variable_CB.Location = new System.Drawing.Point(56, 100);
+            this.variable_CB.Name = "variable_CB";
+            this.variable_CB.Size = new System.Drawing.Size(121, 21);
+            this.variable_CB.TabIndex = 5;
+            // 
             // button1
             // 
             this.button1.AutoSize = true;
             this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(65, 115);
+            this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.button1.Location = new System.Drawing.Point(65, 169);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 25);
             this.button1.TabIndex = 4;
@@ -110,11 +180,9 @@
             // 
             this.dataSelector.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dataSelector.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataSelector.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataSelector.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.dataSelector.FormattingEnabled = true;
-            this.dataSelector.Items.AddRange(new object[] {
-            "Mostrar Proyeccción de Datos",
-            "Mostrar Datos Históricos"});
+            this.dataSelector.Items.AddRange(new object[] {"Mostrar Proyeccción de Datos", "Mostrar Datos Históricos"});
             this.dataSelector.Location = new System.Drawing.Point(9, 14);
             this.dataSelector.Name = "dataSelector";
             this.dataSelector.Size = new System.Drawing.Size(205, 32);
@@ -130,54 +198,6 @@
             this.mapGenerator.Size = new System.Drawing.Size(519, 503);
             this.mapGenerator.TabIndex = 1;
             // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.contamination_txtBox);
-            this.panel2.Controls.Add(this.department_txtBox);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(10, 271);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(243, 158);
-            this.panel2.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Departamento";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 15);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Nivel de Contaminación";
-            // 
-            // department_txtBox
-            // 
-            this.department_txtBox.Location = new System.Drawing.Point(6, 40);
-            this.department_txtBox.Name = "department_txtBox";
-            this.department_txtBox.ReadOnly = true;
-            this.department_txtBox.Size = new System.Drawing.Size(162, 20);
-            this.department_txtBox.TabIndex = 2;
-            // 
-            // contamination_txtBox
-            // 
-            this.contamination_txtBox.Location = new System.Drawing.Point(6, 119);
-            this.contamination_txtBox.Name = "contamination_txtBox";
-            this.contamination_txtBox.ReadOnly = true;
-            this.contamination_txtBox.Size = new System.Drawing.Size(162, 20);
-            this.contamination_txtBox.TabIndex = 3;
-            // 
             // HeatMapReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,27 +211,28 @@
             this.Text = "Mapa de Calor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.CheckedListBox dataSelector;
-        private System.Windows.Forms.Panel mapGenerator;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox contamination_txtBox;
+        private System.Windows.Forms.CheckedListBox dataSelector;
         private System.Windows.Forms.TextBox department_txtBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel mapGenerator;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox variable_CB;
+
+        #endregion
     }
 }

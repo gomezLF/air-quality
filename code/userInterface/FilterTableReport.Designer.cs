@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.dataViewer = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.filter_panel = new System.Windows.Forms.Panel();
             this.filterOption_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.paging_panel = new System.Windows.Forms.Panel();
@@ -46,14 +47,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.filter_button = new System.Windows.Forms.Button();
             this.description_tooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.selectionData_panel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.dataViewer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             this.filter_panel.SuspendLayout();
             this.paging_panel.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // selectionData_panel
@@ -163,6 +163,15 @@
             this.dataViewer.Size = new System.Drawing.Size(614, 480);
             this.dataViewer.TabIndex = 6;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(614, 480);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // filter_panel
             // 
             this.filter_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -255,15 +264,6 @@
             this.filter_button.UseVisualStyleBackColor = false;
             this.filter_button.Click += new System.EventHandler(this.Filter_button_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(614, 480);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // FilterTableReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,11 +277,11 @@
             this.selectionData_panel.PerformLayout();
             this.mainPanel.ResumeLayout(false);
             this.dataViewer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             this.filter_panel.ResumeLayout(false);
             this.paging_panel.ResumeLayout(false);
             this.paging_panel.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
         }
 
