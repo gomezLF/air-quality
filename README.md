@@ -55,7 +55,7 @@ Enlace [vídeo](https://github.com/gomezLF/air-quality/blob/develop/docs/deliver
 
 ### Tercera entrega
 
-Esta entrega consiste en el refinamiento de las entregas anteriores, diagrama de secuencia de las 3 operaciones básicas de la aplicación, implementación de reportes y el vídeo explicativo
+Esta entrega consiste en el refinamiento de las entregas anteriores, diagrama de secuencia de las 3 operaciones básicas de la aplicación, implementación de reportes y el vídeo explicativo.
 
 #### 1. Refinamiento y diagrama de secuencia
 
@@ -66,12 +66,21 @@ Esta entrega consiste en el refinamiento de las entregas anteriores, diagrama de
 
 #### 3. Vídeo
 
+[Link](https://www.youtube.com/watch?v=JEN7ib1LjVM&feature=youtu.be)
 ---
 
 ### Entrega final
 
-Para la última entrega los entregables son refinamiento de las entregas anterioires y un algortimo de análiisis de la información
+Para la última entrega los entregables son: refinamiento de las entregas anterioires y un algoritmo de análisis de la información.
 
 #### 1. Refinamiento entrgas anteriores
 
 [Entregas anteriores](https://github.com/gomezLF/air-quality/tree/develop/docs/final-delivery)
+
+#### 2. Proyecto
+
+[Link del proyecto](https://github.com/gomezLF/air-quality/tree/develop/code)
+
+#### 3. Vídeo
+
+[Link]()
