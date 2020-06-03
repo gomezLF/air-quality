@@ -84,3 +84,9 @@ Para la última entrega los entregables son: refinamiento de las entregas anteri
 #### 3. Vídeo
 
 [Link](https://youtu.be/oDtgrvJkfAc)
+
+---
+
+### Lecciones Aprendidas
+
+[Link](https://youtu.be/HMfpkrZdvbo)
