@@ -59,10 +59,10 @@ Esta entrega consiste en el refinamiento de las entregas anteriores, diagrama de
 
 #### 1. Refinamiento y diagrama de secuencia
 
-[Refinamiento, y diagrama de secuencia](https://github.com/gomezLF/air-quality/tree/develop/docs/delivery-3)
+[Refinamiento y diagrama de secuencia](https://github.com/gomezLF/air-quality/tree/develop/docs/delivery-3)
 
 #### 2. Reportes
-[Reportes implementados en Visual Studio](https://github.com/gomezLF/air-quality/tree/970ec50e2d39dc22e139d1f1200163919805b0f8)
+[Reportes implementados](https://github.com/gomezLF/air-quality/tree/970ec50e2d39dc22e139d1f1200163919805b0f8)
 
 #### 3. Vídeo
 [Link](https://www.youtube.com/watch?v=JEN7ib1LjVM&feature=youtu.be)
