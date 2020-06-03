@@ -65,8 +65,8 @@ Esta entrega consiste en el refinamiento de las entregas anteriores, diagrama de
 [Reportes implementados en Visual Studio](https://github.com/gomezLF/air-quality/tree/develop/code)
 
 #### 3. Vídeo
-
 [Link](https://www.youtube.com/watch?v=JEN7ib1LjVM&feature=youtu.be)
+
 ---
 
 ### Entrega final
