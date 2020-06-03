@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Windows 10\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Windows 10\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_air-quality.1179220790.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Windows 10\source\repos\air-quality\code" t="IncludeFlat">
+      <e p="air-quality.sln" t="IncludeFlat" />
+      <e p="model" t="IncludeRecursive">
+        <e p="Algorithms.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Data.cs" t="Include" />
+        <e p="DatabaseAdministrator.cs" t="Include" />
+        <e p="model.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="userInterface" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Colombia.xml" t="Include" />
+        <e p="FilterTableReport.cs" t="Include" />
+        <e p="FilterTableReport.Designer.cs" t="Include" />
+        <e p="FilterTableReport.resx" t="Include" />
+        <e p="HeatMapReport.cs" t="Include" />
+        <e p="HeatMapReport.Designer.cs" t="Include" />
+        <e p="HeatMapReport.resx" t="Include" />
+        <e p="LevelConcentrationReport.cs" t="Include" />
+        <e p="LevelConcentrationReport.Designer.cs" t="Include" />
+        <e p="LevelConcentrationReport.resx" t="Include" />
+        <e p="MainMenu.cs" t="Include" />
+        <e p="MainMenu.Designer.cs" t="Include" />
+        <e p="MainMenu.resx" t="Include" />
+        <e p="MonitoryStationReport.cs" t="Include" />
+        <e p="MonitoryStationReport.Designer.cs" t="Include" />
+        <e p="MonitoryStationReport.resx" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="bar-chart.png" t="Include" />
+          <e p="column-chart.png" t="Include" />
+          <e p="data-table.png" t="Include" />
+          <e p="pie-chart.png" t="Include" />
+          <e p="pointing.png" t="Include" />
+        </e>
+        <e p="StudyPlaceReport.cs" t="Include" />
+        <e p="StudyPlaceReport.Designer.cs" t="Include" />
+        <e p="StudyPlaceReport.resx" t="Include" />
+        <e p="userInterface.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
